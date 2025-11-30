@@ -5,77 +5,32 @@ import Footer from '../components/Footer.astro';
 ---
 
 <Layout title="Terms & Conditions | Empower Automation">
-    <Navbar />
-    
-    <main class="pt-32 pb-20 px-4">
+	<Navbar />
+	<main class="pt-32 pb-20 px-4 min-h-screen">
         <div class="max-w-4xl mx-auto">
-            <h1 class="text-4xl md:text-5xl font-bold text-white mb-8">Terms & Conditions</h1>
-            <p class="text-gray-400 mb-12">Last Updated: November 2025</p>
+            <h1 class="text-3xl md:text-5xl font-bold text-white mb-8 font-mono">
+                <span class="text-brand-purple">const</span> <span class="text-white">termsAndConditions</span> = <span class="text-brand-gold">true</span>;
+            </h1>
+            
+            <div class="prose prose-invert prose-lg max-w-none text-gray-300">
+                <p class="lead">Last updated: {new Date().toLocaleDateString('en-GB')}</p>
 
-            <div class="prose prose-invert max-w-none space-y-12 text-gray-300">
-                
-                <section>
-                    <h2 class="text-2xl font-bold text-white mb-4">1. Overview</h2>
-                    <p>
-                        These terms and conditions govern the use of services provided by Empower Automation ("we", "us", "our"). By engaging our services, you agree to these terms.
-                    </p>
-                </section>
+                <h3>1. Agreement to Terms</h3>
+                <p>These Terms and Conditions constitute a legally binding agreement made between you, whether personally or on behalf of an entity ("you") and Empower Automation ("we," "us" or "our"), concerning your access to and use of the website as well as any other media form, media channel, mobile website or mobile application related, linked, or otherwise connected thereto (collectively, the "Site").</p>
 
-                <section>
-                    <h2 class="text-2xl font-bold text-white mb-4">2. Services & Scope</h2>
-                    <p>
-                        We provide custom automation solutions, Google Apps Script development, and workflow optimisation. The specific scope of work for each project will be detailed in a separate Proposal or Statement of Work.
-                    </p>
-                </section>
+                <h3>2. Intellectual Property Rights</h3>
+                <p>Unless otherwise indicated, the Site is our proprietary property and all source code, databases, functionality, software, website designs, audio, video, text, photographs, and graphics on the Site (collectively, the "Content") and the trademarks, service marks, and logos contained therein (the "Marks") are owned or controlled by us or licensed to us, and are protected by copyright and trademark laws.</p>
 
-                <section class="bg-[#161b22] p-8 rounded-xl border border-brand-orange/30">
-                    <h2 class="text-2xl font-bold text-white mb-4">3. Process & Payment Terms</h2>
-                    <p class="mb-4">
-                        We operate on a transparent, milestone-based process to ensure clarity and security for both parties.
-                    </p>
-                    <ol class="list-decimal list-inside space-y-4 ml-4">
-                        <li>
-                            <strong class="text-white">Discovery Call:</strong> An initial consultation to understand your requirements and determine feasibility.
-                        </li>
-                        <li>
-                            <strong class="text-white">Proposal & Fixed Price:</strong> We will provide a detailed proposal outlining the scope of work, deliverables, and a fixed project price.
-                        </li>
-                        <li>
-                            <strong class="text-white">50% Deposit:</strong> Work commences only after a 50% non-refundable deposit has been received. This secures your slot in our development schedule.
-                        </li>
-                        <li>
-                            <strong class="text-white">Build & Review:</strong> We develop the solution and provide a demonstration or test version for your review.
-                        </li>
-                        <li>
-                            <strong class="text-white">Balance Payment:</strong> The remaining 50% balance is due upon completion and sign-off, prior to the final transfer of ownership or deployment to your live environment.
-                        </li>
-                    </ol>
-                </section>
+                <h3>3. User Representations</h3>
+                <p>By using the Site, you represent and warrant that: (1) all registration information you submit will be true, accurate, current, and complete; (2) you will maintain the accuracy of such information and promptly update such registration information as necessary; (3) you have the legal capacity and you agree to comply with these Terms and Conditions.</p>
 
-                <section>
-                    <h2 class="text-2xl font-bold text-white mb-4">4. Intellectual Property</h2>
-                    <p>
-                        Upon full payment, you (the Client) will own the specific scripts and code created for your project. We reserve the right to reuse generic code snippets, libraries, or methodologies that do not contain your confidential data or proprietary business logic.
-                    </p>
-                </section>
+                <h3>4. Governing Law</h3>
+                <p>These conditions are governed by and interpreted following the laws of the United Kingdom, and the use of the United Kingdom courts will have jurisdiction to resolve any dispute between us.</p>
 
-                <section>
-                    <h2 class="text-2xl font-bold text-white mb-4">5. Liability</h2>
-                    <p>
-                        While we rigorously test all automations, we cannot be held liable for any data loss, business interruption, or damages arising from the use of our scripts, particularly those caused by third-party API changes, Google platform updates, or user error.
-                    </p>
-                </section>
-
-                <section>
-                    <h2 class="text-2xl font-bold text-white mb-4">6. Retainers & Support</h2>
-                    <p>
-                        Ongoing support or "Peace of Mind" retainers are billed monthly in advance. Unused hours do not roll over. Retainers can be cancelled with 30 days' written notice.
-                    </p>
-                </section>
-
+                <h3>5. Contact Us</h3>
+                <p>In order to resolve a complaint regarding the Site or to receive further information regarding use of the Site, please contact us via our contact form.</p>
             </div>
         </div>
-    </main>
-
-    <Footer />
+	</main>
+	<Footer />
 </Layout>
