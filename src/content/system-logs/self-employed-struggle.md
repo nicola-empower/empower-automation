@@ -11,7 +11,7 @@ tags: ["Solopreneur", "Automation", "Mindset"]
 
 Let’s be honest, the self-employed life is a rollercoaster. One minute you’re celebrating a new client; the next, you’re drowning in admin that keeps you working until midnight. I’ve been there. But one thing has become crystal clear: automation isn’t just a buzzword; it’s a non-negotiable lifeline for solopreneurs.
 
-For too long, I was stuck in a relentless cycle of manual tasks, feeling overwhelmed and stretched thin. Does that sound familiar? That’s precisely why I started architecting automations—not just for my clients, but for the very core of my own business. It has been an absolute game-changer.
+For too long, I was stuck in a relentless cycle of manual tasks, feeling overwhelmed and stretched thin. Does that sound familiar? That’s precisely why I started architecting automations: not just for my clients, but for the very core of my own business. It has been an absolute game-changer.
 
 ## Practicing What I Preach: A Look Inside My Business
 
@@ -24,7 +24,7 @@ From the moment an inquiry lands, my systems automate proposals, contracts, and 
 While my brilliant accountant handles the big stuff, I’ve automated my invoicing process to ensure timely payments and drastically reduce the headache of manually tracking everything.
 
 ### Project Management
-With multiple clients and three children, staying organised is paramount—especially with a dash of perimenopausal brain fog! My systems use automated reminders and recurring tasks so I never miss a deadline.
+With multiple clients and three children, staying organised is paramount; especially with a dash of perimenopausal brain fog! My systems use automated reminders and recurring tasks so I never miss a deadline.
 
 ### Custom Solutions
 For everything else, I use Google Apps Script to create bespoke automations that link my spreadsheets, documents, and emails. It’s like having a custom-built digital assistant for my precise workflows.

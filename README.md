@@ -1,43 +1,51 @@
-# Astro Starter Kit: Minimal
+# Empower Automation ⚡
 
-```sh
-npm create astro@latest -- --template minimal
-```
+**Custom Google Workspace Automation & Business Process Optimisation**
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+This is the official website for **Empower Automation**, a consultancy specialising in Google Apps Script, API integrations, and workflow efficiency. The site is built to be fast, responsive, and interactive, featuring tools to help potential clients understand the value of automation.
 
-## 🚀 Project Structure
+##  Tech Stack
 
-Inside of your Astro project, you'll see the following folders and files:
+*   **Framework**: [Astro](https://astro.build) (v5)
+*   **UI Library**: [React](https://react.dev)
+*   **Styling**: [Tailwind CSS](https://tailwindcss.com) (v4)
+*   **Icons**: [Lucide React](https://lucide.dev)
+*   **Deployment**: [Vercel](https://vercel.com)
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+##  Key Features
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+*   **Interactive ROI Calculator**: A React-based tool that calculates annual savings and "break-even" time for custom automation builds.
+*   **Automation Logic Gate**: An interactive decision tree helping users decide if a task is worth automating.
+*   **Lead Magnet Integration**: Both tools are connected to a Google Apps Script backend to capture leads and email reports directly to users.
+*   **Terminal Aesthetic**: A custom dark-mode design system inspired by developer environments (VS Code / Terminal).
+*   **Productised Services**: Dedicated landing pages for "Automated Invoice" and "Smarter Work Day" packages.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+##  Getting Started
 
-Any static assets, like images, can be placed in the `public/` directory.
+### Prerequisites
 
-## 🧞 Commands
+*   Node.js (v18 or higher)
+*   npm
 
-All commands are run from the root of the project, from a terminal:
+### Installation
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/nicola-empower/empower-automation.git
+    ```
+2.  Install dependencies:
+    ```bash
+    npm install
+    ```
+3.  Start the development server:
+    ```bash
+    npm run dev
+    ```
 
-## 👀 Want to learn more?
+## 🌐 Deployment
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+This project is configured for **Vercel**.
+
+##  License
+
+All rights reserved. Nicola Berry. Empower Automation.

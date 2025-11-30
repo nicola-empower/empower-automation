@@ -59,8 +59,8 @@ Yes! A professional onboarding system isn’t just for large companies. For a sm
 A foundational system can be designed and implemented surprisingly quickly. We’ll map out a clear timeline in our first call so you know exactly what to expect.
 
 **Can this integrate with the tools I already use?**
-Absolutely. The goal is not to replace what works, but to connect your existing tools—like your calendar, email, and payment processor—into one seamless and intelligent flow.
+Absolutely. The goal is not to replace what works, but to connect your existing tools;like your calendar, email, and payment processor, into one seamless and intelligent flow.
 
 ## Stop Dreading Onboarding. Start Delighting Clients.
 
-Imagine a world where every new client feels instantly valued and seamlessly integrated into your workflow—all with minimal effort from you. Let’s make that your reality.
+Imagine a world where every new client feels instantly valued and seamlessly integrated into your workflow, all with minimal effort from you. Let’s make that your reality.

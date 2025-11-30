@@ -15,7 +15,7 @@ You might mistakenly believe SOPs are just for massive corporations, but for amb
 
 ## What Exactly Are SOPs?
 
-Simply put, an SOP is a detailed, step-by-step guide on how to perform a specific task within your business. Think of it as your business’s instruction manual—a precise roadmap ensuring a job is done the same way, perfectly, every single time. If it’s a task you do repeatedly, it needs an SOP.
+Simply put, an SOP is a detailed, step-by-step guide on how to perform a specific task within your business. Think of it as your business’s instruction manual; a precise roadmap ensuring a job is done the same way, perfectly, every single time. If it’s a task you do repeatedly, it needs an SOP.
 
 ## Why Custom SOPs Are a Game-Changer
 
@@ -37,7 +37,7 @@ When we build your custom SOPs, we can integrate powerful automations. Here’s 
 
 1.  **Send Welcome Email:** As soon as a client is marked as “signed” in your system, a digital helper automatically sends your personalised welcome email from a pre-approved template.
 2.  **Schedule Kick-off Call:** The system sends a direct booking link to the client. Once they choose a time, it automatically creates the event and sends calendar invites to everyone involved.
-3.  **Send Client Intake Form:** A link to your Google Form is sent automatically. When the client fills it in, their answers are populated directly into your client tracking spreadsheet—no manual copying required.
+3.  **Send Client Intake Form:** A link to your Google Form is sent automatically. When the client fills it in, their answers are populated directly into your client tracking spreadsheet; no manual copying required.
 4.  **Create Client Folder in Drive:** An instant digital filing cabinet is created. The system automatically builds a dedicated, organised folder for the new client in your Google Drive, complete with pre-set subfolders.
 5.  **Add to Project Management Tool:** Your new client’s details are instantly added to your project tool (like Trello or Asana), and initial tasks can even be assigned automatically.
 6.  **Invoice First Payment:** Like a diligent accounts assistant, the system automatically generates and sends the first invoice based on your set rules, and begins tracking its status.

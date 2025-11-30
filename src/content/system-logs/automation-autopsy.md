@@ -21,7 +21,7 @@ The journey for most of us follows a familiar path. We start out, doing everythi
 
 And we have. But we've also unintentionally built a hidden vulnerability into the very heart of our business.
 
-We've built our business's critical functions—its nervous system—on rented land. And if something happens to us, the rent is the first thing that stops getting paid.
+We've built our business's critical functions - its nervous system - on rented land. And if something happens to us, the rent is the first thing that stops getting paid.
 
 ## The Unthinkable Scenario
 
