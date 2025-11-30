@@ -1,0 +1,73 @@
+---
+import TypewriterText from './TypewriterText';
+
+---
+
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-brand-dark">
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0 z-0 opacity-20">
+        <img src="/hero-background.png" alt="Cyber Industrial Background" class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-gradient-to-b from-brand-dark via-transparent to-brand-dark"></div>
+    </div>
+
+    <!-- Terminal Window -->
+    <div class="relative z-10 w-full max-w-4xl mx-4">
+        <div class="bg-[#0d1117]/90 backdrop-blur-md border border-gray-700 rounded-lg shadow-2xl overflow-hidden">
+            <!-- Terminal Header -->
+            <div class="bg-gray-800/50 px-4 py-2 flex items-center gap-2 border-b border-gray-700">
+                <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                <span class="ml-2 text-xs text-gray-400 font-mono">empower-automation -- bash -- 80x24</span>
+            </div>
+
+            <!-- Terminal Content -->
+            <div class="p-6 md:p-10 font-mono text-left">
+                <div class="mb-4 text-gray-400">
+                    <span class="text-brand-gold">user@empower</span>:<span class="text-blue-400">~</span>$ ./system_scan.sh
+                </div>
+                
+                <div class="space-y-4">
+                    <div class="text-green-400">
+                        > DETECTING INEFFICIENCIES...
+                    </div>
+                    <div class="text-gray-300 pl-4">
+                        [!] Found: 15 hours of manual data entry/week<br/>
+                        [!] Found: High risk of human error<br/>
+                        [!] Found: Disconnected systems
+                    </div>
+                    
+                    <div class="mt-6 text-gray-400">
+                        <span class="text-brand-gold">user@empower</span>:<span class="text-blue-400">~</span>$ ./execute_solution.js
+                    </div>
+
+                    <TypewriterText 
+                        client:visible 
+                        text="Stop Doing Repetitive Tasks Manually." 
+                        className="text-2xl md:text-4xl font-bold text-white mt-2 block"
+                        delay={1.5}
+                    />
+                    
+                    <div class="mt-8 flex flex-wrap gap-4 opacity-0 animate-fade-in" style="animation-delay: 4s; animation-fill-mode: forwards;">
+                        <a href="#services" class="bg-brand-orange hover:bg-orange-600 text-white font-bold py-3 px-6 rounded transition-colors">
+                            See What I Build
+                        </a>
+                        <a href="/contact" class="border border-brand-orange text-brand-orange hover:bg-brand-orange/10 font-bold py-3 px-6 rounded transition-colors">
+                            Book Consultation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    @keyframes fade-in {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+        animation: fade-in 0.5s ease-out;
+    }
+</style>

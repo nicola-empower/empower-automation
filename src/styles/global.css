@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-orange: #F26F21;
+  --color-brand-magenta: #C6246E;
+  --color-brand-purple: #582C4D;
+  --color-brand-gold: #FDB913;
+  --color-brand-dark: #0d1117;
+
+  --font-sans: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-dark text-gray-300 font-sans;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-mono text-white;
+  }
+}
+
+/* Terminal Effects */
+.terminal-cursor {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
