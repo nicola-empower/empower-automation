@@ -1,0 +1,20 @@
+
+> empower-automation@0.0.1 build
+> astro build
+
+[2m21:54:00[22m [34m[content][39m Syncing content
+[2m21:54:00[22m [34m[content][39m Synced content
+[2m21:54:00[22m [34m[types][39m Generated [2m752ms[22m
+[2m21:54:00[22m [34m[build][39m output: [34m"static"[39m
+[2m21:54:00[22m [34m[build][39m mode: [34m"static"[39m
+[2m21:54:00[22m [34m[build][39m directory: [34mC:\Users\nicol\OneDrive\Desktop\the websites\automation specialist\empower-automation\dist\[39m
+[2m21:54:00[22m [34m[build][39m Collecting build info...
+[2m21:54:00[22m [34m[build][39m [32m✓ Completed in 830ms.[39m
+[2m21:54:00[22m [34m[build][39m Building static entrypoints...
+[31m[1m21:54:01[22m [ERROR] [vite][39m [31m✗[39m Build failed in 1.30s
+[@mdx-js/rollup] Unexpected closing tag `</p>`, expected corresponding closing tag for `<div>` (8:1-8:50)
+file: C:/Users/nicol/OneDrive/Desktop/the websites/automation specialist/empower-automation/src/content/system-logs/custom-sops.mdx:22:3
+  [1mLocation:[22m
+    [4mC:/Users/nicol/OneDrive/Desktop/the websites/automation specialist/empower-automation/src/content/system-logs/custom-sops.mdx:22:3[24m
+  [1mStack trace:[22m
+[2m    at Object.transform (file:///C:/Users/nicol/OneDrive/Desktop/the%20websites/automation%20specialist/empower-automation/node_modules/@astrojs/mdx/dist/vite-plugin-mdx.js:62:15)[22m

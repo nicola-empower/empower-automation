@@ -1,0 +1,153 @@
+---
+title: "Never Forget a Follow-Up Again: Turn Any Email into a Google Calendar Event"
+description: "How to use Google Apps Script to automatically create calendar events from sent emails."
+pubDate: "2025-11-05"
+tags: ["Email", "Calendar", "Automation"]
+---
+
+<div className="max-w-4xl mx-auto text-gray-300">
+
+# Never Forget a Follow-Up Again
+
+<p className="text-xl text-brand-orange font-medium mb-10">
+  How to Turn Any Sent Email into a Google Calendar Event Automatically.
+</p>
+
+<p className="mb-6 leading-relaxed">
+  Let’s be honest, the mental to-do list is endless. Whether you’re running a business, managing a household, or both, there are a million tiny tasks to keep track of. For me, one of the most important—and anxiety-inducing—tasks is managing my son's repeat prescriptions.
+</p>
+
+<p className="mb-8 leading-relaxed">
+  I’d send the email request to the GP, and then the mental countdown would begin. <em>Did they receive it? When will it be ready? When should I go to the pharmacy?</em> Adding that worry to an already overflowing plate was stressful. I knew there had to be a better way.
+</p>
+
+## The “Secret Weapon”: A Peek Behind the Curtain
+
+<p className="mb-6">
+  The magic comes from <strong>Google Apps Script</strong>. It’s the engine that allows for truly custom workflows to be built directly within Google Workspace.
+</p>
+
+{/* Security/GDPR Note */}
+<div className="bg-brand-orange/20 border border-brand-orange/50 p-4 rounded-lg mb-10 flex items-start">
+  <div className="text-2xl mr-4">🔒</div>
+  <div>
+    <h4 className="text-brand-orange font-bold text-sm uppercase tracking-wide mb-1">Privacy First</h4>
+    <p className="text-sm text-gray-400">
+      Critically, these scripts process data securely within Google’s ecosystem, making them inherently GDPR-friendly as they adhere to Google’s robust data protection standards.
+    </p>
+  </div>
+</div>
+
+<h3 className="text-white font-bold text-lg mb-6">How I Automate My Son's Prescriptions:</h3>
+
+{/* The 4-Step Process Grid */}
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-12">
+  
+  {/* Step 1 */}
+  <div className="bg-gray-800 p-5 rounded-xl border border-gray-700">
+    <div className="text-2xl mb-2">👁️</div>
+    <h4 className="text-white font-bold mb-2">1. It Watches "Sent"</h4>
+    <p className="text-sm text-gray-400">
+      The script keeps an eye out for any email I send to the GP with a specific subject line. It acts as my digital gatekeeper.
+    </p>
+  </div>
+
+  {/* Step 2 */}
+  <div className="bg-gray-800 p-5 rounded-xl border border-gray-700">
+    <div className="text-2xl mb-2">🕒</div>
+    <h4 className="text-white font-bold mb-2">2. It Reads the Date</h4>
+    <p className="text-sm text-gray-400">
+      As soon as I hit “send,” the script wakes up, reads the current date and time, and gets to work instantly.
+    </p>
+  </div>
+
+  {/* Step 3 */}
+  <div className="bg-gray-800 p-5 rounded-xl border border-gray-700">
+    <div className="text-2xl mb-2">🧮</div>
+    <h4 className="text-white font-bold mb-2">3. It Does the Maths</h4>
+    <p className="text-sm text-gray-400">
+      It automatically calculates a future date (e.g., 3 working days ahead), intelligently skipping weekends to find the right day.
+    </p>
+  </div>
+
+  {/* Step 4 */}
+  <div className="bg-gray-800 p-5 rounded-xl border border-gray-700">
+    <div className="text-2xl mb-2">📅</div>
+    <h4 className="text-white font-bold mb-2">4. It Creates the Event</h4>
+    <p className="text-sm text-gray-400">
+      Finally, it pops a detailed event into my Google Calendar, titled with the exact medication I need to collect. Job done.
+    </p>
+  </div>
+
+</div>
+
+{/* Quote 1 */}
+<blockquote className="border-l-4 border-brand-orange bg-gray-800/50 p-6 italic text-gray-400 mb-12">
+  "Before this, my mental to-do list was a disaster. I was constantly worried I’d forget to follow up... Now, sending an email instantly creates a calendar event. It’s given me back hours of time and a huge amount of peace of mind."
+</blockquote>
+
+## From Prescriptions to Proposals
+
+<p className="mb-6">
+  This automation was a game-changer for my personal peace of mind, but I quickly realised the exact same logic is a powerhouse for business. It can be customised for almost any workflow.
+</p>
+
+<div className="bg-gray-800 rounded-xl p-8 border border-gray-700 mb-10">
+  <ul className="space-y-4">
+    <li className="flex items-start">
+      <span className="text-brand-gold mr-3 mt-1">✓</span>
+      <div>
+        <strong className="text-white">Sales & Quoting:</strong> 
+        <span className="text-gray-400"> Automatically schedule a follow-up after sending a proposal.</span>
+      </div>
+    </li>
+    <li className="flex items-start">
+      <span className="text-brand-gold mr-3 mt-1">✓</span>
+      <div>
+        <strong className="text-white">Client Onboarding:</strong> 
+        <span className="text-gray-400"> Email a welcome pack and trigger a series of check-in reminders.</span>
+      </div>
+    </li>
+    <li className="flex items-start">
+      <span className="text-brand-gold mr-3 mt-1">✓</span>
+      <div>
+        <strong className="text-white">Project Management:</strong> 
+        <span className="text-gray-400"> Send a brief to a contractor and create a deadline reminder in your shared calendar.</span>
+      </div>
+    </li>
+    <li className="flex items-start">
+      <span className="text-brand-gold mr-3 mt-1">✓</span>
+      <div>
+        <strong className="text-white">E-commerce:</strong> 
+        <span className="text-gray-400"> Log a customer query from an email into a spreadsheet and set a reminder to check for resolution.</span>
+      </div>
+    </li>
+    <li className="flex items-start">
+      <span className="text-brand-gold mr-3 mt-1">✓</span>
+      <div>
+        <strong className="text-white">Personal Finance:</strong> 
+        <span className="text-gray-400"> Forward a bill and automatically create a payment reminder two days before the due date.</span>
+      </div>
+    </li>
+  </ul>
+</div>
+
+{/* Quote 2 */}
+<blockquote className="border-l-4 border-brand-orange bg-gray-800/50 p-6 italic text-gray-400 mb-12">
+  "This automation is a total game-changer for my business... It ensures every single client gets a consistent, professional follow-up without me ever having to remember to do it."
+</blockquote>
+
+## Ready to Automate Your Peace of Mind?
+
+<div className="bg-gray-900 border border-gray-700 p-8 rounded-2xl text-center relative overflow-hidden">
+  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-orange to-brand-magenta"></div>
+  <h2 className="text-2xl font-bold text-white mb-4">Stop worrying about things slipping through the cracks.</h2>
+  <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
+    Free up your mental energy to focus on what truly matters. Each automation I build is bespoke and tailored to your unique workflow.
+  </p>
+  <p className="text-brand-orange font-bold">
+    Let's build your system.
+  </p>
+</div>
+
+</div>
