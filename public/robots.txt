@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://empower-automation.com/sitemap-index.xml

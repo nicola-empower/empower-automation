@@ -33,7 +33,9 @@ tags: ["Google Sheets", "Efficiency", "Automation"]
 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
 
   <div className="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-brand-gold/50 transition-all group">
-    <div className="w-12 h-12 bg-brand-gold text-gray-900 rounded-lg flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">📊</div>
+    <div className="w-12 h-12 bg-brand-gold text-gray-900 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+      <IconBarChart className="w-6 h-6" />
+    </div>
     <h3 className="text-white font-bold text-lg mb-2">Automated Reporting</h3>
     <p className="text-sm text-gray-400">
       Pull data from multiple sources (CRM, Ads, Finance) into a single, live dashboard. No more "end of month" reporting panic.
@@ -41,7 +43,9 @@ tags: ["Google Sheets", "Efficiency", "Automation"]
   </div>
 
   <div className="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-brand-gold/50 transition-all group">
-    <div className="w-12 h-12 bg-brand-gold text-gray-900 rounded-lg flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">🔔</div>
+    <div className="w-12 h-12 bg-brand-gold text-gray-900 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+      <IconBell className="w-6 h-6" />
+    </div>
     <h3 className="text-white font-bold text-lg mb-2">Smart Alerts</h3>
     <p className="text-sm text-gray-400">
       Get a Slack message or email instantly when a specific metric hits a threshold (e.g., "Inventory Low" or "High Value Lead").
@@ -49,7 +53,9 @@ tags: ["Google Sheets", "Efficiency", "Automation"]
   </div>
 
   <div className="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-brand-gold/50 transition-all group">
-    <div className="w-12 h-12 bg-brand-gold text-gray-900 rounded-lg flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">📑</div>
+    <div className="w-12 h-12 bg-brand-gold text-gray-900 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+      <IconFileText className="w-6 h-6" />
+    </div>
     <h3 className="text-white font-bold text-lg mb-2">Document Generation</h3>
     <p className="text-sm text-gray-400">
       Turn rows of data into formatted Google Docs or PDFs (Invoices, Contracts, Reports) with a single click.
@@ -57,7 +63,9 @@ tags: ["Google Sheets", "Efficiency", "Automation"]
   </div>
 
   <div className="bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-brand-gold/50 transition-all group">
-    <div className="w-12 h-12 bg-brand-gold text-gray-900 rounded-lg flex items-center justify-center text-2xl mb-4 group-hover:scale-110 transition-transform">🧹</div>
+    <div className="w-12 h-12 bg-brand-gold text-gray-900 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+      <IconShield className="w-6 h-6" />
+    </div>
     <h3 className="text-white font-bold text-lg mb-2">Data Hygiene</h3>
     <p className="text-sm text-gray-400">
       Scripts that automatically format phone numbers, remove duplicates, and validate emails as data is entered.
@@ -74,12 +82,12 @@ tags: ["Google Sheets", "Efficiency", "Automation"]
   <div className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700">
     <div className="h-2 bg-brand-gold"></div>
     <div className="p-6">
-      <div className="text-4xl mb-4">🔄</div>
+      <div className="mb-4 text-brand-gold"><IconRefresh className="w-10 h-10" /></div>
       <h3 className="text-white font-bold text-lg mb-4 h-12">Data Transfer & Sync</h3>
       <ul className="space-y-3 text-sm text-gray-400">
-        <li className="flex items-start"><span className="text-brand-gold mr-2">●</span> CRM Integration via Forms</li>
-        <li className="flex items-start"><span className="text-brand-gold mr-2">●</span> Cross-Sheet Consolidation</li>
-        <li className="flex items-start"><span className="text-brand-gold mr-2">●</span> Auto-Inventory Updates</li>
+        <li className="flex items-start"><IconCheck className="w-4 h-4 text-brand-gold mr-2 mt-1 flex-shrink-0" /> CRM Integration via Forms</li>
+        <li className="flex items-start"><IconCheck className="w-4 h-4 text-brand-gold mr-2 mt-1 flex-shrink-0" /> Cross-Sheet Consolidation</li>
+        <li className="flex items-start"><IconCheck className="w-4 h-4 text-brand-gold mr-2 mt-1 flex-shrink-0" /> Auto-Inventory Updates</li>
       </ul>
     </div>
   </div>
@@ -88,12 +96,12 @@ tags: ["Google Sheets", "Efficiency", "Automation"]
   <div className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700">
     <div className="h-2 bg-brand-gold"></div>
     <div className="p-6">
-      <div className="text-4xl mb-4">📊</div>
+      <div className="mb-4 text-brand-gold"><IconBarChart className="w-10 h-10" /></div>
       <h3 className="text-white font-bold text-lg mb-4 h-12">Dynamic Reporting</h3>
       <ul className="space-y-3 text-sm text-gray-400">
-        <li className="flex items-start"><span className="text-brand-gold mr-2">●</span> PDF Weekly Sales Reports</li>
-        <li className="flex items-start"><span className="text-brand-gold mr-2">●</span> Project Progress Updates</li>
-        <li className="flex items-start"><span className="text-brand-gold mr-2">●</span> Financial Summaries</li>
+        <li className="flex items-start"><IconCheck className="w-4 h-4 text-brand-gold mr-2 mt-1 flex-shrink-0" /> PDF Weekly Sales Reports</li>
+        <li className="flex items-start"><IconCheck className="w-4 h-4 text-brand-gold mr-2 mt-1 flex-shrink-0" /> Project Progress Updates</li>
+        <li className="flex items-start"><IconCheck className="w-4 h-4 text-brand-gold mr-2 mt-1 flex-shrink-0" /> Financial Summaries</li>
       </ul>
     </div>
   </div>
@@ -102,12 +110,12 @@ tags: ["Google Sheets", "Efficiency", "Automation"]
   <div className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700">
     <div className="h-2 bg-brand-gold"></div>
     <div className="p-6">
-      <div className="text-4xl mb-4">⚙️</div>
+      <div className="mb-4 text-brand-gold"><IconSettings className="w-10 h-10" /></div>
       <h3 className="text-white font-bold text-lg mb-4 h-12">Custom Workflows</h3>
       <ul className="space-y-3 text-sm text-gray-400">
-        <li className="flex items-start"><span className="text-brand-gold mr-2">●</span> Auto-Folder Creation</li>
-        <li className="flex items-start"><span className="text-brand-gold mr-2">●</span> Task Assignment & Reminders</li>
-        <li className="flex items-start"><span className="text-brand-gold mr-2">●</span> Automated Feedback Forms</li>
+        <li className="flex items-start"><IconCheck className="w-4 h-4 text-brand-gold mr-2 mt-1 flex-shrink-0" /> Auto-Folder Creation</li>
+        <li className="flex items-start"><IconCheck className="w-4 h-4 text-brand-gold mr-2 mt-1 flex-shrink-0" /> Task Assignment & Reminders</li>
+        <li className="flex items-start"><IconCheck className="w-4 h-4 text-brand-gold mr-2 mt-1 flex-shrink-0" /> Automated Feedback Forms</li>
       </ul>
     </div>
   </div>

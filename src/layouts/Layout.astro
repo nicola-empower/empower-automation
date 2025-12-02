@@ -1,14 +1,23 @@
 ---
-import '../styles/global.css';
-import '@fontsource/inter';
-import '@fontsource/jetbrains-mono';
+import "../styles/global.css";
+import "@fontsource/inter";
+import "@fontsource/jetbrains-mono";
+
+import { Analytics } from "@vercel/analytics/react";
 
 interface Props {
 	title: string;
-    description?: string;
+	description?: string;
+	image?: string;
 }
 
-const { title, description = "Custom Google Workspace Automation Specialist" } = Astro.props;
+const {
+	title,
+	description = "Custom Google Workspace Automation Specialist. We build bespoke Google Apps Scripts to streamline your business.",
+	image = "/og-image.png",
+} = Astro.props;
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
@@ -19,9 +28,30 @@ const { title, description = "Custom Google Workspace Automation Specialist" } =
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="canonical" href={canonicalURL} />
+
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={Astro.url} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={new URL(image, Astro.url)} />
+
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={Astro.url} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+		<link rel="sitemap" href="/sitemap-index.xml" />
+
 		<title>{title}</title>
 	</head>
-	<body class="bg-brand-dark text-gray-300 font-sans antialiased selection:bg-brand-magenta selection:text-white">
+	<body
+		class="bg-brand-dark text-gray-300 font-sans antialiased selection:bg-brand-magenta selection:text-white"
+	>
 		<slot />
+		<Analytics client:idle />
 	</body>
 </html>

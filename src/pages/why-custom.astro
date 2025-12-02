@@ -1,88 +1,134 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro';
-import BusinessFitQuiz from '../components/BusinessFitQuiz';
-import HumanErrorScan from '../components/HumanErrorScan';
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import BusinessFitQuiz from "../components/BusinessFitQuiz";
+import HumanErrorScan from "../components/HumanErrorScan";
+import { Briefcase, X, Scissors, Check } from "lucide-react";
 ---
 
 <Layout title="Why Custom Automation? | Empower Automation">
     <Navbar />
-    
+
     <main class="pt-24 pb-20">
         <!-- Hero Content -->
         <section class="px-4 max-w-4xl mx-auto text-center mb-20">
             <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
-                Why Your Business Deserves More Than an <span class="text-brand-orange">'Off-the-Rack'</span> Solution
+                Why Your Business Deserves More Than an <span
+                    class="text-brand-orange">'Off-the-Rack'</span
+                > Solution
             </h1>
             <p class="text-xl text-gray-400 leading-relaxed">
-                Let's be honest. The word "code" can feel intimidating. It sounds complex, expensive, and frankly, a bit scary. But let's forget about that word for a second and talk about something we all understand: <span class="text-brand-gold font-bold">getting a perfect fit.</span>
+                Let's be honest. The word "code" can feel intimidating. It
+                sounds complex, expensive, and frankly, a bit scary. But let's
+                forget about that word for a second and talk about something we
+                all understand: <span class="text-brand-gold font-bold"
+                    >getting a perfect fit.</span
+                >
             </p>
         </section>
 
         <!-- The Comparison -->
-        <section class="px-4 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 mb-24">
+        <section
+            class="px-4 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 mb-24"
+        >
             <!-- Off the Rack -->
             <div class="bg-[#1a1f2e] p-8 rounded-xl border border-gray-700">
-                <div class="w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center mb-6">
-                    <span class="text-3xl">👔</span>
+                <div
+                    class="w-16 h-16 bg-gray-700 rounded-full flex items-center justify-center mb-6"
+                >
+                    <Briefcase className="w-8 h-8 text-gray-300" />
                 </div>
-                <h2 class="text-2xl font-bold text-white mb-4">The 'Off-the-Rack' Compromise</h2>
+                <h2 class="text-2xl font-bold text-white mb-4">
+                    The 'Off-the-Rack' Compromise
+                </h2>
                 <p class="text-gray-400 mb-6">
-                    Your first choice is to buy a solution 'off-the-rack.' This is the world of subscription software like Zapier. It's like buying a suit from a high-street department store.
+                    Your first choice is to buy a solution 'off-the-rack.' This
+                    is the world of subscription software like Zapier. It's like
+                    buying a suit from a high-street department store.
                 </p>
                 <ul class="space-y-3 text-gray-300">
                     <li class="flex items-start gap-3">
-                        <span class="text-red-400 mt-1">✕</span>
-                        <span>It's designed to fit everyone, so it fits no one perfectly.</span>
+                        <X className="w-5 h-5 text-red-400 mt-1" />
+                        <span
+                            >It's designed to fit everyone, so it fits no one
+                            perfectly.</span
+                        >
                     </li>
                     <li class="flex items-start gap-3">
-                        <span class="text-red-400 mt-1">✕</span>
-                        <span>It might be tight in the shoulders (struggling with complex workflows).</span>
+                        <X className="w-5 h-5 text-red-400 mt-1" />
+                        <span
+                            >It might be tight in the shoulders (struggling with
+                            complex workflows).</span
+                        >
                     </li>
                     <li class="flex items-start gap-3">
-                        <span class="text-red-400 mt-1">✕</span>
-                        <span>You pay for "flashy buttons" and extra fabric you'll never use.</span>
+                        <X className="w-5 h-5 text-red-400 mt-1" />
+                        <span
+                            >You pay for "flashy buttons" and extra fabric
+                            you'll never use.</span
+                        >
                     </li>
                     <li class="flex items-start gap-3">
-                        <span class="text-red-400 mt-1">✕</span>
-                        <span>It's a recurring monthly cost that never ends.</span>
+                        <X className="w-5 h-5 text-red-400 mt-1" />
+                        <span
+                            >It's a recurring monthly cost that never ends.</span
+                        >
                     </li>
                 </ul>
             </div>
 
             <!-- Custom Tailored -->
-            <div class="bg-brand-dark p-8 rounded-xl border-2 border-brand-gold shadow-[0_0_30px_rgba(253,185,19,0.1)]">
-                <div class="w-16 h-16 bg-brand-gold/20 rounded-full flex items-center justify-center mb-6">
-                    <span class="text-3xl">🧵</span>
+            <div
+                class="bg-brand-dark p-8 rounded-xl border-2 border-brand-gold shadow-[0_0_30px_rgba(253,185,19,0.1)]"
+            >
+                <div
+                    class="w-16 h-16 bg-brand-gold/20 rounded-full flex items-center justify-center mb-6"
+                >
+                    <Scissors className="w-8 h-8 text-brand-gold" />
                 </div>
-                <h2 class="text-2xl font-bold text-white mb-4">The 'Custom-Tailored' Advantage</h2>
+                <h2 class="text-2xl font-bold text-white mb-4">
+                    The 'Custom-Tailored' Advantage
+                </h2>
                 <p class="text-gray-400 mb-6">
-                    This is what we do with Google Apps Script. We're not 'writing scary code.' We are taking your business's exact measurements and building a solution that fits you like a glove.
+                    This is what we do with Google Apps Script. We're not
+                    'writing scary code.' We are taking your business's exact
+                    measurements and building a solution that fits you like a
+                    glove.
                 </p>
                 <ul class="space-y-3 text-gray-300">
                     <li class="flex items-start gap-3">
-                        <span class="text-green-400 mt-1">✓</span>
-                        <span class="font-bold text-white">A Perfect Fit:</span> Every process is designed specifically for how you work. No waste, no compromise.
+                        <Check className="w-5 h-5 text-green-400 mt-1" />
+                        <span class="font-bold text-white">A Perfect Fit:</span>
+                        Every process is designed specifically for how you work.
+                        No waste, no compromise.
                     </li>
                     <li class="flex items-start gap-3">
-                        <span class="text-green-400 mt-1">✓</span>
-                        <span class="font-bold text-white">Built to Last:</span> Stitched directly into your Google Workspace. A permanent, resilient asset.
+                        <Check className="w-5 h-5 text-green-400 mt-1" />
+                        <span class="font-bold text-white">Built to Last:</span>
+                        Stitched directly into your Google Workspace. A permanent,
+                        resilient asset.
                     </li>
                     <li class="flex items-start gap-3">
-                        <span class="text-green-400 mt-1">✓</span>
-                        <span class="font-bold text-white">One-Time Investment:</span> You own it. No monthly subscription fees appearing on your bank statement.
+                        <Check className="w-5 h-5 text-green-400 mt-1" />
+                        <span class="font-bold text-white"
+                            >One-Time Investment:</span
+                        > You own it. No monthly subscription fees appearing on your
+                        bank statement.
                     </li>
                 </ul>
             </div>
         </section>
-        
+
         <!-- Human Error Scan Section -->
         <section class="px-4 max-w-5xl mx-auto mb-24">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-white mb-4">The Hidden Cost of "Manual"</h2>
+                <h2 class="text-3xl font-bold text-white mb-4">
+                    The Hidden Cost of "Manual"
+                </h2>
                 <p class="text-gray-400">
-                    It's not just about time. It's about accuracy. See how small errors compound over a year.
+                    It's not just about time. It's about accuracy. See how small
+                    errors compound over a year.
                 </p>
             </div>
             <HumanErrorScan client:visible />
@@ -91,13 +137,18 @@ import HumanErrorScan from '../components/HumanErrorScan';
         <!-- Quiz Section -->
         <section class="px-4 max-w-4xl mx-auto">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-white mb-4">The Automation Fitting Session</h2>
+                <h2 class="text-3xl font-bold text-white mb-4">
+                    The Automation Fitting Session
+                </h2>
                 <p class="text-gray-400">
-                    Are your current systems a perfect fit, or are you making do with an off-the-rack solution?
-                    <br/>Answer five questions to get your <span class="text-brand-gold">Business Fit Score</span>.
+                    Are your current systems a perfect fit, or are you making do
+                    with an off-the-rack solution?
+                    <br />Answer five questions to get your <span
+                        class="text-brand-gold">Business Fit Score</span
+                    >.
                 </p>
             </div>
-            
+
             <BusinessFitQuiz client:visible />
         </section>
     </main>

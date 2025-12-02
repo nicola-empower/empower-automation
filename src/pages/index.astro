@@ -1,73 +1,101 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Navbar from '../components/Navbar.astro';
-import Footer from '../components/Footer.astro';
-import TerminalHero from '../components/TerminalHero.astro';
-import CodePricing from '../components/CodePricing.astro';
-import DataPipeline from '../components/DataPipeline';
-import { Code } from 'astro:components';
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import TerminalHero from "../components/TerminalHero.astro";
+import CodePricing from "../components/CodePricing.astro";
+import DataPipeline from "../components/DataPipeline";
+import { Code } from "astro:components";
+
+import { Image } from "astro:assets";
+import portfolioImg from "../assets/portfolio.jpg";
+import autopsyImg from "../assets/automation-autopsy-feature.png";
 
 const services = [
-  {
-    title: "Automated Document Generation",
-    icon: "file-text",
-    desc: "Instantly create invoices, quotes, or reports from Google Sheet data.",
-    code: `function generateInvoice(data) {
+    {
+        title: "Automated Document Generation",
+        icon: "file-text",
+        desc: "Instantly create invoices, quotes, or reports from Google Sheet data.",
+        code: `function generateInvoice(data) {
   const doc = DocumentApp.create('Invoice');
   doc.getBody().appendParagraph(data.client);
   return doc.getUrl();
-}`
-  },
-  {
-    title: "Smart Email & Calendar Actions",
-    icon: "mail",
-    desc: "Automatically create calendar events and send personalised follow-ups.",
-    code: `function scheduleMeeting(email) {
+}`,
+    },
+    {
+        title: "Smart Email & Calendar Actions",
+        icon: "mail",
+        desc: "Automatically create calendar events and send personalised follow-ups.",
+        code: `function scheduleMeeting(email) {
   CalendarApp.createEvent('Consultation',
     new Date('2023-10-10'),
     new Date('2023-10-10')
   );
   GmailApp.sendEmail(email, 'Confirmed');
-}`
-  },
-  {
-    title: "Data & Workflow Management",
-    icon: "database",
-    desc: "Sync data between spreadsheets and manage your entire client onboarding.",
-    code: `function syncData(source, target) {
+}`,
+    },
+    {
+        title: "Data & Workflow Management",
+        icon: "database",
+        desc: "Sync data between spreadsheets and manage your entire client onboarding.",
+        code: `function syncData(source, target) {
   const data = source.getDataRange().getValues();
   target.getRange(1, 1, data.length, data[0].length)
     .setValues(data);
-}`
-  }
+}`,
+    },
 ];
 
 const faqs = [
-    { q: "With AI everywhere, why invest in custom Apps Script?", a: "AI is fantastic for creative tasks, but it's not designed for precise, reliable, rule-based work. A custom Apps Script is like building a bespoke engine; it does exactly what you need, every single time, without fail." },
-    { q: "Can't I just ask ChatGPT to write the code?", a: "AI can generate code snippets, but it doesn't understand your unique business context, security needs, or how to handle errors. I provide a robust, tested business solution, not just raw code." },
-    { q: "Are custom scripts really better than Zapier?", a: "Zapier is great for simple tasks. But for complex workflows with unique logic, a custom script is more powerful, flexible, and often cheaper since there are no monthly subscription fees." },
-    { q: "How secure is Google Apps Script?", a: "Extremely. All code runs within your own Google account, inheriting Google's world-class security. Your data never leaves your workspace." }
+    {
+        q: "With AI everywhere, why invest in custom Apps Script?",
+        a: "AI is fantastic for creative tasks, but it's not designed for precise, reliable, rule-based work. A custom Apps Script is like building a bespoke engine; it does exactly what you need, every single time, without fail.",
+    },
+    {
+        q: "Can't I just ask ChatGPT to write the code?",
+        a: "AI can generate code snippets, but it doesn't understand your unique business context, security needs, or how to handle errors. I provide a robust, tested business solution, not just raw code.",
+    },
+    {
+        q: "Are custom scripts really better than Zapier?",
+        a: "Zapier is great for simple tasks. But for complex workflows with unique logic, a custom script is more powerful, flexible, and often cheaper since there are no monthly subscription fees.",
+    },
+    {
+        q: "How secure is Google Apps Script?",
+        a: "Extremely. All code runs within your own Google account, inheriting Google's world-class security. Your data never leaves your workspace.",
+    },
 ];
 ---
 
 <Layout title="Empower Automation | Google Workspace Specialist">
-	<Navbar />
-	
-	<main>
-		<TerminalHero />
+    <Navbar />
+
+    <main>
+        <TerminalHero />
 
         <!-- What is Apps Script? -->
         <section class="py-20 px-4 bg-brand-dark relative">
-            <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div
+                class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center"
+            >
                 <div>
                     <h2 class="text-3xl md:text-4xl font-bold mb-6">
-                        <span class="text-brand-orange">const</span> <span class="text-white">whatIsAppsScript</span> = <span class="text-brand-gold">"The Secret Engine"</span>;
+                        <span class="text-brand-orange">const</span>
+                        <span class="text-white">whatIsAppsScript</span> = <span
+                            class="text-brand-gold">"The Secret Engine"</span
+                        >;
                     </h2>
                     <p class="text-gray-400 text-lg leading-relaxed mb-6">
-                        Think of it as the secret engine inside your Google account. It’s a coding language that lets me connect your Google apps (Sheets, Docs, Gmail, Calendar) and make them do custom tasks for you automatically.
+                        Think of it as the secret engine inside your Google
+                        account. It’s a coding language that lets me connect
+                        your Google apps (Sheets, Docs, Gmail, Calendar) and
+                        make them do custom tasks for you automatically.
                     </p>
-                    <p class="text-gray-300 font-mono border-l-4 border-brand-magenta pl-4 italic">
-                        "Instead of you manually copying data from a form to a spreadsheet, then to an invoice, then to an email – I write a script that does it all for you with one click."
+                    <p
+                        class="text-gray-300 font-mono border-l-4 border-brand-magenta pl-4 italic"
+                    >
+                        "Instead of you manually copying data from a form to a
+                        spreadsheet, then to an invoice, then to an email – I
+                        write a script that does it all for you with one click."
                     </p>
                 </div>
                 <div>
@@ -78,14 +106,21 @@ const faqs = [
 
         <!-- About Me -->
         <section class="py-20 px-4 bg-[#0f1219] border-y border-gray-800">
-            <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div
+                class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center"
+            >
                 <div class="order-2 md:order-1">
                     <div class="relative group">
-                        <div class="absolute -inset-1 bg-gradient-to-r from-brand-purple to-brand-orange rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"></div>
-                        <div class="relative aspect-square rounded-lg overflow-hidden border border-gray-800">
-                            <img 
-                                src="/portfolio.jpg" 
-                                alt="Nicola - Founder of Empower Automation" 
+                        <div
+                            class="absolute -inset-1 bg-gradient-to-r from-brand-purple to-brand-orange rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"
+                        >
+                        </div>
+                        <div
+                            class="relative aspect-square rounded-lg overflow-hidden border border-gray-800"
+                        >
+                            <Image
+                                src={portfolioImg}
+                                alt="Nicola - Founder of Empower Automation"
                                 class="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-500"
                             />
                         </div>
@@ -93,22 +128,38 @@ const faqs = [
                 </div>
                 <div class="order-1 md:order-2">
                     <h2 class="text-3xl md:text-4xl font-bold mb-6">
-                        <span class="text-brand-purple">const</span> <span class="text-white">founder</span> = <span class="text-brand-gold">"Nicola"</span>;
+                        <span class="text-brand-purple">const</span>
+                        <span class="text-white">founder</span> = <span
+                            class="text-brand-gold">"Nicola"</span
+                        >;
                     </h2>
                     <p class="text-gray-400 text-lg leading-relaxed mb-6">
-                        Hi, I'm Nicola. I'm not just a coder; I'm a business owner and a mum of three. I understand the chaos of running a business: the late nights, the endless admin, and the feeling that you're constantly juggling.
+                        Hi, I'm Nicola. I'm not just a coder; I'm a business
+                        owner and a mum of three. I understand the chaos of
+                        running a business: the late nights, the endless admin,
+                        and the feeling that you're constantly juggling.
                     </p>
                     <p class="text-gray-400 text-lg leading-relaxed mb-6">
-                        I started Empower to help other business owners escape that grind. My mission isn't just to write code; it's to give you your time back. Whether that's dinner with your family, a weekend off, or just the headspace to focus on growing your business.
+                        I started Empower to help other business owners escape
+                        that grind. My mission isn't just to write code; it's to
+                        give you your time back. Whether that's dinner with your
+                        family, a weekend off, or just the headspace to focus on
+                        growing your business.
                     </p>
                     <div class="flex gap-4">
-                        <div class="bg-brand-dark border border-gray-800 px-4 py-2 rounded text-sm font-mono text-brand-orange">
+                        <div
+                            class="bg-brand-dark border border-gray-800 px-4 py-2 rounded text-sm font-mono text-brand-orange"
+                        >
                             <span class="text-gray-500">//</span> Efficiency
                         </div>
-                        <div class="bg-brand-dark border border-gray-800 px-4 py-2 rounded text-sm font-mono text-brand-orange">
+                        <div
+                            class="bg-brand-dark border border-gray-800 px-4 py-2 rounded text-sm font-mono text-brand-orange"
+                        >
                             <span class="text-gray-500">//</span> Freedom
                         </div>
-                        <div class="bg-brand-dark border border-gray-800 px-4 py-2 rounded text-sm font-mono text-brand-orange">
+                        <div
+                            class="bg-brand-dark border border-gray-800 px-4 py-2 rounded text-sm font-mono text-brand-orange"
+                        >
                             <span class="text-gray-500">//</span> Growth
                         </div>
                     </div>
@@ -121,95 +172,212 @@ const faqs = [
             <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl font-bold mb-4">
-                        <span class="text-brand-purple">class</span> <span class="text-white">AutomationServices</span> <span class="text-brand-purple">extends</span> <span class="text-brand-gold">Solution</span>
+                        <span class="text-brand-purple">class</span>
+                        <span class="text-white">AutomationServices</span>
+                        <span class="text-brand-purple">extends</span>
+                        <span class="text-brand-gold">Solution</span>
                     </h2>
-                    <p class="text-gray-400">Custom functions built for your specific needs.</p>
+                    <p class="text-gray-400">
+                        Custom functions built for your specific needs.
+                    </p>
                 </div>
 
                 <div class="grid md:grid-cols-3 gap-8">
-                    {services.map(service => (
-                        <div class="bg-brand-dark border border-gray-800 rounded-lg p-6 hover:border-brand-orange transition-colors group">
-                            <div class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center mb-4 group-hover:bg-brand-orange/20 transition-colors">
-                                <i data-lucide={service.icon} class="text-brand-orange"></i>
+                    {
+                        services.map((service) => (
+                            <div class="bg-brand-dark border border-gray-800 rounded-lg p-6 hover:border-brand-orange transition-colors group">
+                                <div class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center mb-4 group-hover:bg-brand-orange/20 transition-colors">
+                                    <i
+                                        data-lucide={service.icon}
+                                        class="text-brand-orange"
+                                    />
+                                </div>
+                                <h3 class="text-xl font-bold text-white mb-2">
+                                    {service.title}
+                                </h3>
+                                <p class="text-gray-400 mb-4 text-sm">
+                                    {service.desc}
+                                </p>
+                                <div class="bg-[#1e1e1e] rounded p-3 text-xs overflow-hidden">
+                                    <Code
+                                        code={service.code}
+                                        lang="javascript"
+                                        theme="dracula"
+                                    />
+                                </div>
                             </div>
-                            <h3 class="text-xl font-bold text-white mb-2">{service.title}</h3>
-                            <p class="text-gray-400 mb-4 text-sm">{service.desc}</p>
-                            <div class="bg-[#1e1e1e] rounded p-3 text-xs overflow-hidden">
-                                <Code code={service.code} lang="javascript" theme="dracula" />
-                            </div>
+                        ))
+                    }
+                </div>
+            </div>
+        </section>
+
+        <!-- Automation Autopsy Feature -->
+        <section
+            class="py-20 px-4 bg-brand-dark border-t border-gray-800 relative overflow-hidden"
+        >
+            <!-- Background Glow -->
+            <div
+                class="absolute top-0 right-0 w-1/2 h-full bg-brand-magenta/5 blur-[100px] pointer-events-none"
+            >
+            </div>
+
+            <div
+                class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10"
+            >
+                <div class="order-2 md:order-1">
+                    <div class="relative group">
+                        <div
+                            class="absolute -inset-1 bg-gradient-to-r from-brand-magenta to-brand-purple rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"
+                        >
                         </div>
-                    ))}
+                        <div
+                            class="relative rounded-lg overflow-hidden border border-gray-800 aspect-video"
+                        >
+                            <Image
+                                src={autopsyImg}
+                                alt="Automation Autopsy - Digital Heart"
+                                class="object-cover w-full h-full hover:scale-105 transition-transform duration-700"
+                            />
+                        </div>
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                        <span class="text-brand-magenta">const</span>
+                        <span class="text-white">autopsy</span> = <span
+                            class="text-brand-gold">"The Silent Killer"</span
+                        >;
+                    </h2>
+                    <h3 class="text-xl text-white font-bold mb-4">
+                        Why Your Business Might Die With You
+                    </h3>
+                    <p class="text-gray-400 text-lg leading-relaxed mb-8">
+                        We build businesses to give us freedom, but often we
+                        build traps. If you stepped away tomorrow, would your
+                        business survive? Or is it running on a life-support
+                        system of subscriptions that only you understand?
+                    </p>
+                    <a
+                        href="/system-logs/automation-autopsy"
+                        class="inline-flex items-center gap-2 text-brand-magenta hover:text-brand-gold font-mono font-bold transition-colors group"
+                    >
+                        <span class="text-lg">Read More</span>
+                        <i
+                            data-lucide="arrow-right"
+                            class="w-5 h-5 group-hover:translate-x-1 transition-transform"
+                        ></i>
+                    </a>
                 </div>
             </div>
-        </section>
 
-        <!-- Pricing -->
-        <CodePricing />
+            <!-- Pricing -->
+            <CodePricing />
 
-        <!-- Testimonial -->
-        <section class="py-20 px-4 bg-brand-dark border-y border-gray-800">
-            <div class="max-w-4xl mx-auto text-center">
-                <h2 class="text-2xl md:text-3xl font-bold text-white mb-8 font-mono">
-                    <span class="text-brand-purple">const</span> <span class="text-white">clientFeedback</span> = <span class="text-brand-gold">"Revolutionary"</span>;
+            <!-- Testimonial -->
+            <section class="py-20 px-4 bg-brand-dark border-y border-gray-800">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2
+                        class="text-2xl md:text-3xl font-bold text-white mb-8 font-mono"
+                    >
+                        <span class="text-brand-purple">const</span>
+                        <span class="text-white">clientFeedback</span> = <span
+                            class="text-brand-gold">"Revolutionary"</span
+                        >;
+                    </h2>
+                    <div
+                        class="inline-block p-2 rounded-full bg-brand-magenta/10 mb-6"
+                    >
+                        <i
+                            data-lucide="quote"
+                            class="text-brand-magenta w-8 h-8"></i>
+                    </div>
+                    <blockquote
+                        class="text-2xl md:text-3xl font-mono text-gray-200 leading-relaxed mb-8"
+                    >
+                        "The custom script Nicola built has been revolutionary.
+                        It saves us hours of manual data entry every single week
+                        and has completely eliminated human error."
+                    </blockquote>
+                    <cite
+                        class="text-brand-orange not-italic font-bold tracking-wide uppercase"
+                    >
+                        - Satisfied Client, Scotland
+                    </cite>
+                </div>
+            </section>
+
+            <!-- FAQ -->
+            <section id="faq" class="py-20 px-4 bg-[#0f1219]">
+                <div class="max-w-3xl mx-auto">
+                    <h2 class="text-3xl font-bold text-center mb-12">
+                        <span class="text-brand-purple">function</span>
+                        <span class="text-white">resolveQueries</span>()
+                    </h2>
+
+                    <div class="space-y-4">
+                        {
+                            faqs.map((faq, index) => (
+                                <details class="group bg-brand-dark border border-gray-800 rounded-lg overflow-hidden">
+                                    <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-5 text-gray-200 hover:bg-gray-800/50 transition-colors">
+                                        <span>{faq.q}</span>
+                                        <span class="transition group-open:rotate-180">
+                                            <i data-lucide="chevron-down" />
+                                        </span>
+                                    </summary>
+                                    <div class="text-gray-400 p-5 pt-0 leading-relaxed">
+                                        {faq.a}
+                                    </div>
+                                </details>
+                            ))
+                        }
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <section
+                class="py-24 px-4 text-center bg-gradient-to-b from-brand-dark to-[#1a1f2e]"
+            >
+                <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                    Ready to Execute?
                 </h2>
-                <div class="inline-block p-2 rounded-full bg-brand-magenta/10 mb-6">
-                    <i data-lucide="quote" class="text-brand-magenta w-8 h-8"></i>
-                </div>
-                <blockquote class="text-2xl md:text-3xl font-mono text-gray-200 leading-relaxed mb-8">
-                    "The custom script Nicola built has been revolutionary. It saves us hours of manual data entry every single week and has completely eliminated human error."
-                </blockquote>
-                <cite class="text-brand-orange not-italic font-bold tracking-wide uppercase">
-                    - Satisfied Client, Scotland
-                </cite>
-            </div>
+                <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
+                    Eliminate the repetitive tasks that are slowing you down.
+                    Let's build a solution that fits perfectly.
+                </p>
+                <a
+                    href="/contact"
+                    class="inline-block bg-brand-orange hover:bg-orange-600 text-white font-bold py-4 px-10 rounded-lg shadow-[0_0_20px_rgba(242,111,33,0.4)] hover:shadow-[0_0_30px_rgba(242,111,33,0.6)] transition-all transform hover:-translate-y-1"
+                >
+                    Book Free Consultation
+                </a>
+            </section>
         </section>
 
-        <!-- FAQ -->
-        <section id="faq" class="py-20 px-4 bg-[#0f1219]">
-            <div class="max-w-3xl mx-auto">
-                <h2 class="text-3xl font-bold text-center mb-12">
-                    <span class="text-brand-purple">function</span> <span class="text-white">resolveQueries</span>()
-                </h2>
-                
-                <div class="space-y-4">
-                    {faqs.map((faq, index) => (
-                        <details class="group bg-brand-dark border border-gray-800 rounded-lg overflow-hidden">
-                            <summary class="flex justify-between items-center font-medium cursor-pointer list-none p-5 text-gray-200 hover:bg-gray-800/50 transition-colors">
-                                <span>{faq.q}</span>
-                                <span class="transition group-open:rotate-180">
-                                    <i data-lucide="chevron-down"></i>
-                                </span>
-                            </summary>
-                            <div class="text-gray-400 p-5 pt-0 leading-relaxed">
-                                {faq.a}
-                            </div>
-                        </details>
-                    ))}
-                </div>
-            </div>
-        </section>
+        <Footer />
+    </main>
 
-        <!-- CTA -->
-        <section class="py-24 px-4 text-center bg-gradient-to-b from-brand-dark to-[#1a1f2e]">
-            <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">Ready to Execute?</h2>
-            <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">
-                Eliminate the repetitive tasks that are slowing you down. Let's build a solution that fits perfectly.
-            </p>
-            <a href="/contact" class="inline-block bg-brand-orange hover:bg-orange-600 text-white font-bold py-4 px-10 rounded-lg shadow-[0_0_20px_rgba(242,111,33,0.4)] hover:shadow-[0_0_30px_rgba(242,111,33,0.6)] transition-all transform hover:-translate-y-1">
-                Book Free Consultation
-            </a>
-        </section>
-
-	</main>
-	
-	<Footer />
+    <script>
+        import {
+            createIcons,
+            FileText,
+            Mail,
+            Database,
+            Quote,
+            ChevronDown,
+            ArrowRight,
+        } from "lucide";
+        createIcons({
+            icons: {
+                FileText,
+                Mail,
+                Database,
+                Quote,
+                ChevronDown,
+                ArrowRight,
+            },
+        });
+    </script>
 </Layout>
-
-<script>
-    import { createIcons, FileText, Mail, Database, Quote, ChevronDown } from 'lucide';
-    createIcons({
-        icons: {
-            FileText, Mail, Database, Quote, ChevronDown
-        }
-    });
-</script>
+```

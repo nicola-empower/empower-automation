@@ -1,0 +1,103 @@
+---
+title: "Apps Script for Beginners: Your First Automation in 10 Minutes"
+description: "A step-by-step guide to creating your first Google Apps Script to auto-sort a Google Sheet."
+pubDate: "2025-10-05"
+tags: ["Tutorial", "Google Sheets", "Beginners"]
+---
+
+<div className="bg-brand-dark/50 border border-gray-800 rounded-xl p-8 mb-12">
+  <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Apps Script for Beginners</h1>
+  <p className="text-xl text-gray-400 leading-relaxed">
+    Unlock efficiency with your gateway to Google Workspace automation. In just 10 minutes, you'll build a script to auto-sort your Google Sheets.
+  </p>
+</div>
+
+<div className="grid md:grid-cols-2 gap-12 items-center mb-12">
+  <div>
+    <h2 className="text-3xl font-bold text-white mb-4">Your Inaugural Automation</h2>
+    <p className="text-gray-400 mb-6">
+      Consider the advantage of a client database that consistently maintains alphabetical order by name. This eliminates repetitive manual intervention.
+    </p>
+    <div className="bg-brand-gold/10 border-l-4 border-brand-gold p-6 rounded-r-lg">
+      <div className="flex items-center gap-3 mb-2">
+        <IconBookOpen className="w-6 h-6 text-brand-gold" />
+        <h4 className="font-bold text-white">The Goal</h4>
+      </div>
+      <p className="text-sm text-gray-300">
+        Create a script that automatically sorts your sheet by the first column whenever you open it.
+      </p>
+    </div>
+  </div>
+  <div className="bg-[#1a1f2e] p-8 rounded-xl border border-gray-700 flex flex-col items-center justify-center text-center">
+    <IconCode className="w-24 h-24 text-gray-600 mb-4" />
+    <h3 className="text-xl font-bold text-gray-400">Let's Get Coding</h3>
+  </div>
+</div>
+
+<div className="space-y-12 mb-12">
+  <div className="relative pl-8 border-l-2 border-gray-700">
+    <div className="absolute -left-[11px] top-0 w-6 h-6 bg-brand-dark border-2 border-brand-gold rounded-full flex items-center justify-center text-xs font-bold text-brand-gold">1</div>
+    <h3 className="text-2xl font-bold text-white mb-4">Access Your Target Google Sheet</h3>
+    <p className="text-gray-400">Open the Google Sheet intended for automation.</p>
+  </div>
+
+  <div className="relative pl-8 border-l-2 border-gray-700">
+    <div className="absolute -left-[11px] top-0 w-6 h-6 bg-brand-dark border-2 border-brand-gold rounded-full flex items-center justify-center text-xs font-bold text-brand-gold">2</div>
+    <h3 className="text-2xl font-bold text-white mb-4">Navigate to the Apps Script Editor</h3>
+    <p className="text-gray-400 mb-4">From your active Google Sheet, select **Extensions** > **Apps Script**.</p>
+    <div className="bg-gray-800/50 p-4 rounded-lg border border-gray-700 flex items-center gap-4">
+      <IconTerminal className="w-6 h-6 text-gray-400" />
+      <span className="text-gray-300">A new browser tab will open with the editor.</span>
+    </div>
+  </div>
+
+  <div className="relative pl-8 border-l-2 border-gray-700">
+    <div className="absolute -left-[11px] top-0 w-6 h-6 bg-brand-dark border-2 border-brand-gold rounded-full flex items-center justify-center text-xs font-bold text-brand-gold">3</div>
+    <h3 className="text-2xl font-bold text-white mb-4">Implement the Automation Script</h3>
+    <p className="text-gray-400 mb-4">Delete everything there and paste this code:</p>
+    <div className="bg-[#1e1e1e] p-4 rounded-lg border border-gray-700 overflow-x-auto">
+      <pre className="text-sm text-gray-300 font-mono">
+{`function autoSortSheet() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var sheet = ss.getSheetByName("Sheet 1"); // <<-- Change to your sheet name!
+
+  // Sorts from row 2 down to the last row
+  var range = sheet.getRange(2, 1, sheet.getLastRow() - 1, sheet.getLastColumn());
+
+  // Sorts by the first column (A) in ascending order
+  range.sort({column: 1, ascending: true});
+}`}
+      </pre>
+    </div>
+  </div>
+
+  <div className="relative pl-8 border-l-2 border-gray-700">
+    <div className="absolute -left-[11px] top-0 w-6 h-6 bg-brand-dark border-2 border-brand-gold rounded-full flex items-center justify-center text-xs font-bold text-brand-gold">4</div>
+    <h3 className="text-2xl font-bold text-white mb-4">Save & Authorise</h3>
+    <p className="text-gray-400 mb-4">Click the disk icon to save. Then click **Run**.</p>
+    <div className="bg-gray-800/50 p-4 rounded-lg border border-gray-700 flex items-center gap-4">
+      <IconPlay className="w-6 h-6 text-green-500" />
+      <span className="text-gray-300">You will need to review permissions and "Allow" the script.</span>
+    </div>
+  </div>
+
+  <div className="relative pl-8 border-l-2 border-gray-700">
+    <div className="absolute -left-[11px] top-0 w-6 h-6 bg-brand-dark border-2 border-brand-gold rounded-full flex items-center justify-center text-xs font-bold text-brand-gold">5</div>
+    <h3 className="text-2xl font-bold text-white mb-4">Configure Trigger</h3>
+    <p className="text-gray-400 mb-4">To run automatically, set up a trigger (alarm clock icon).</p>
+    <ul className="space-y-2 text-gray-400 ml-4 list-disc">
+      <li>Event Source: **From spreadsheet**</li>
+      <li>Event Type: **On open**</li>
+    </ul>
+  </div>
+</div>
+
+<div className="bg-gradient-to-br from-brand-dark to-[#0d1117] border border-gray-800 p-8 rounded-xl text-center">
+  <h2 className="text-3xl font-bold text-white mb-4">Why Choose Empower Automation?</h2>
+  <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+    You’ve just experienced a taste of efficiency. But genuinely transformative automation requires a deeper understanding. We craft bespoke solutions that solve your exact pain points.
+  </p>
+  <div className="inline-block bg-brand-gold text-brand-dark font-bold px-8 py-3 rounded-full hover:bg-white transition-colors cursor-pointer">
+    Get Expert Help
+  </div>
+</div>

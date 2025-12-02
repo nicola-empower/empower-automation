@@ -1,128 +1,144 @@
 ---
-title: "5 Automated Workflows That Will Save You 10 Hours a Week"
-description: "Discover 5 automated workflows using Google Apps Script that can save you 10+ hours a week."
-pubDate: "2025-11-25"
-tags: ["Workflows", "Efficiency", "Google Apps Script"]
+title: "5 Automated Workflows That Will Save You 10+ Hours This Week"
+description: "Stop doing busywork. Here are 5 real-world automations you can implement today."
+pubDate: "2025-11-15"
+tags: ["Productivity", "Automation", "Workflows"]
 ---
 
 <div className="max-w-4xl mx-auto">
 
-# 5 Automated Workflows That Will Save You 10 Hours a Week
+# 5 Automated Workflows That Will Save You 10+ Hours This Week
+<span className="text-xl text-gray-400 block mt-2 mb-10">(And Stop You From Hating Your Inbox)</span>
 
-<p className="text-xl text-gray-600 font-medium mb-8">
-  Because your time is too valuable to waste on repetitive tasks.
-</p>
-
-<div className="prose max-w-none text-gray-600 mb-12">
-  <p>
-    If you’re still manually sending follow-up emails, copying data between spreadsheets, or chasing invoices — you’re not just busy, you’re bleeding time. Automation isn’t just for techies. With the right workflows (and a little help from Google Apps Script), you can reclaim hours every week and focus on what actually grows your business.
+<div className="prose max-w-none text-gray-300 leading-relaxed mb-12">
+  <p className="text-lg font-medium text-white">
+    We all have those tasks. The ones that aren't hard, but they're annoying. Copying data from an email to a spreadsheet. Sending the same "Thanks for your enquiry" email for the 50th time. Chasing invoices.
   </p>
   <p>
-    Here are 5 automated workflows I’ve set up for clients that consistently save them <strong>10+ hours a week</strong>.
+    They're the "death by a thousand cuts" of productivity. Each one only takes 2 minutes, but collectively, they steal hours of your week and drain your mental energy.
+  </p>
+  <p>
+    Here are 5 automated workflows I've built for clients (and myself) that you can steal to reclaim your time.
   </p>
 </div>
 
-<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+<div className="space-y-12">
 
-  {/* Card 1 */}
-  <div className="p-6 border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow bg-white flex flex-col">
-    <div className="flex justify-between items-start mb-4">
-      <div className="text-4xl">📥</div>
-      <span className="bg-brand-gold/20 text-brand-gold text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
-        Saves 1–2 Hours
-      </span>
+  {/* Workflow 1 */}
+  <div className="bg-[#0f1219] border border-gray-800 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
+    <div className="flex items-center mb-6">
+      <div className="bg-brand-orange/10 p-3 rounded-lg mr-4">
+        <IconInbox className="w-6 h-6 text-brand-orange" />
+      </div>
+      <h2 className="text-2xl font-bold text-white m-0">1. The "Zero-Touch" Lead Capture</h2>
     </div>
-    <h3 className="font-bold text-xl mb-2 text-gray-900">1. Auto-Sort Inbox</h3>
-    <p className="text-sm text-gray-600 mb-6 flex-grow">
-      Automatically labels, archives, or flags emails based on sender, subject, or keywords. This simple step turns a chaotic inbox into a streamlined command centre.
-    </p>
-    <div className="bg-brand-orange/10 p-4 rounded-lg border border-brand-orange/20 mt-auto">
-      <p className="text-xs text-brand-orange font-medium">
-        <span className="font-bold block mb-1">🚀 Go further:</span> 
-        I can build a custom script that flags urgent emails, logs them in a spreadsheet, or even triggers a Slack alert.
-      </p>
-    </div>
-  </div>
-
-  {/* Card 2 */}
-  <div className="p-6 border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow bg-white flex flex-col">
-    <div className="flex justify-between items-start mb-4">
-      <div className="text-4xl">🗓️</div>
-      <span className="bg-brand-gold/20 text-brand-gold text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
-        Saves 2–3 Hours
-      </span>
-    </div>
-    <h3 className="font-bold text-xl mb-2 text-gray-900">2. Auto-Create Events</h3>
-    <p className="text-sm text-gray-600 mb-6 flex-grow">
-      Scans your inbox for booking confirmations or client requests and creates calendar events automatically, eliminating the risk of double-booking.
-    </p>
-    <div className="bg-brand-orange/10 p-4 rounded-lg border border-brand-orange/20 mt-auto">
-      <p className="text-xs text-brand-orange font-medium">
-        <span className="font-bold block mb-1">⚡ Custom Script:</span> 
-        I can write a script that parses email content and creates detailed calendar events—complete with reminders, links, and colour-coding.
-      </p>
-    </div>
-  </div>
-
-  {/* Card 3 */}
-  <div className="p-6 border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow bg-white flex flex-col">
-    <div className="flex justify-between items-start mb-4">
-      <div className="text-4xl">🧾</div>
-      <span className="bg-brand-gold/20 text-brand-gold text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
-        Saves 2–3 Hours
-      </span>
-    </div>
-    <h3 className="font-bold text-xl mb-2 text-gray-900">3. Invoicing & Reminders</h3>
-    <p className="text-sm text-gray-600 mb-6 flex-grow">
-      Generates invoices from a spreadsheet and emails them. It can also track due dates and send polite, professional reminders automatically so you get paid faster.
-    </p>
-    <div className="bg-brand-orange/10 p-4 rounded-lg border border-brand-orange/20 mt-auto">
-      <p className="text-xs text-brand-orange font-medium">
-        <span className="font-bold block mb-1">🤖 Script it smarter:</span> 
-        I can automate the entire flow: from logging a task to generating a PDF invoice and emailing it with a custom message.
-      </p>
-    </div>
-  </div>
-
-  {/* Card 4 */}
-  <div className="p-6 border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow bg-white flex flex-col">
-    <div className="flex justify-between items-start mb-4">
-      <div className="text-4xl">🤝</div>
-      <span className="bg-brand-gold/20 text-brand-gold text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
-        Saves 1–2 Hours
-      </span>
-    </div>
-    <h3 className="font-bold text-xl mb-2 text-gray-900">4. Seamless Onboarding</h3>
-    <p className="text-sm text-gray-600 mb-6 flex-grow">
-      Collects client information via a Google Form, stores it neatly in a spreadsheet, and automatically generates a welcome pack or contract.
-    </p>
-    <div className="bg-brand-orange/10 p-4 rounded-lg border border-brand-orange/20 mt-auto">
-      <p className="text-xs text-brand-orange font-medium">
-        <span className="font-bold block mb-1">✨ Scripted bonus:</span> 
-        I can auto-generate a branded proposal or contract from form responses: no copy-pasting required.
-      </p>
-    </div>
-  </div>
-
-  {/* Card 5 - Full Width on Mobile, Standard on Desktop */}
-  <div className="p-6 border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition-shadow bg-white flex flex-col md:col-span-2">
-    <div className="flex justify-between items-start mb-4">
-      <div className="text-4xl">🌟</div>
-      <span className="bg-brand-gold/20 text-brand-gold text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide">
-        Saves 1 Hour
-      </span>
-    </div>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
       <div>
-        <h3 className="font-bold text-xl mb-2 text-gray-900">5. Feedback Requests</h3>
-        <p className="text-sm text-gray-600">
-          Sends a perfectly timed follow-up email asking for feedback or a testimonial after a project wraps up, helping you build social proof effortlessly.
+        <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">The Old Way</h3>
+        <p className="text-gray-400 text-sm">
+          A lead fills out a contact form. You get an email. You read it. You open your CRM/Spreadsheet. You copy the name. You paste it. You copy the email. You paste it. You write a reply.
         </p>
       </div>
-      <div className="bg-brand-orange/10 p-4 rounded-lg border border-brand-orange/20 flex items-center">
-        <p className="text-xs text-brand-orange font-medium">
-          <span className="font-bold block mb-1">⭐ Script upgrade:</span> 
-          I can build a system that tracks project completion dates and sends personalised follow-ups automatically.
+      <div>
+        <h3 className="text-sm font-bold text-brand-orange uppercase tracking-wider mb-3">The Automated Way</h3>
+        <p className="text-white text-sm">
+          Lead fills out form <IconArrowRight className="inline w-4 h-4 text-brand-orange" /> Data instantly goes to CRM/Airtable <IconArrowRight className="inline w-4 h-4 text-brand-orange" /> "Welcome" email is sent automatically <IconArrowRight className="inline w-4 h-4 text-brand-orange" /> You get a Slack/Teams notification if they're a high-value lead.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {/* Workflow 2 */}
+  <div className="bg-[#0f1219] border border-gray-800 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
+    <div className="flex items-center mb-6">
+      <div className="bg-brand-magenta/10 p-3 rounded-lg mr-4">
+        <IconCalendar className="w-6 h-6 text-brand-magenta" />
+      </div>
+      <h2 className="text-2xl font-bold text-white m-0">2. The Meeting Prep Bot</h2>
+    </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div>
+        <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">The Old Way</h3>
+        <p className="text-gray-400 text-sm">
+          10 minutes before a call, you're scrambling to find their website, their last email, and what you talked about last time.
+        </p>
+      </div>
+      <div>
+        <h3 className="text-sm font-bold text-brand-magenta uppercase tracking-wider mb-3">The Automated Way</h3>
+        <p className="text-white text-sm">
+          15 mins before a calendar event <IconArrowRight className="inline w-4 h-4 text-brand-magenta" /> Automation searches your email & CRM for the attendee's name <IconArrowRight className="inline w-4 h-4 text-brand-magenta" /> Compiles a summary <IconArrowRight className="inline w-4 h-4 text-brand-magenta" /> Sends it to you via Slack or Email. You show up prepared, every time.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {/* Workflow 3 */}
+  <div className="bg-[#0f1219] border border-gray-800 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
+    <div className="flex items-center mb-6">
+      <div className="bg-brand-purple/10 p-3 rounded-lg mr-4">
+        <IconFileText className="w-6 h-6 text-brand-purple" />
+      </div>
+      <h2 className="text-2xl font-bold text-white m-0">3. The Invoice Chaser</h2>
+    </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div>
+        <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">The Old Way</h3>
+        <p className="text-gray-400 text-sm">
+          Checking your bank account. Checking Xero. Realising Bob hasn't paid. Feeling awkward sending a "Just following up..." email.
+        </p>
+      </div>
+      <div>
+        <h3 className="text-sm font-bold text-brand-purple uppercase tracking-wider mb-3">The Automated Way</h3>
+        <p className="text-white text-sm">
+          Invoice due date passes <IconArrowRight className="inline w-4 h-4 text-brand-purple" /> System checks payment status <IconArrowRight className="inline w-4 h-4 text-brand-purple" /> If unpaid, sends a polite reminder. 3 days later? A slightly firmer reminder. 7 days later? Alerts you to call them.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {/* Workflow 4 */}
+  <div className="bg-[#0f1219] border border-gray-800 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
+    <div className="flex items-center mb-6">
+      <div className="bg-brand-gold/10 p-3 rounded-lg mr-4">
+        <IconUsers className="w-6 h-6 text-brand-gold" />
+      </div>
+      <h2 className="text-2xl font-bold text-white m-0">4. The Client Onboarding Concierge</h2>
+    </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div>
+        <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">The Old Way</h3>
+        <p className="text-gray-400 text-sm">
+          Client signs contract. You manually send a Welcome Packet. Then a "Here's what to expect" email. Then a "Please fill out this form" email. It's manual, and you often forget a step.
+        </p>
+      </div>
+      <div>
+        <h3 className="text-sm font-bold text-brand-gold uppercase tracking-wider mb-3">The Automated Way</h3>
+        <p className="text-white text-sm">
+          Contract signed <IconArrowRight className="inline w-4 h-4 text-brand-gold" /> Automation triggers a sequence. Day 0: Welcome Email & Questionnaire. Day 2: Project Roadmap. Day 5: Check-in. Client feels taken care of; you haven't lifted a finger.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  {/* Workflow 5 */}
+  <div className="bg-[#0f1219] border border-gray-800 rounded-xl p-8 shadow-sm hover:shadow-md transition-shadow">
+    <div className="flex items-center mb-6">
+      <div className="bg-blue-500/10 p-3 rounded-lg mr-4">
+        <IconStar className="w-6 h-6 text-blue-400" />
+      </div>
+      <h2 className="text-2xl font-bold text-white m-0">5. The Review Generator</h2>
+    </div>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div>
+        <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">The Old Way</h3>
+        <p className="text-gray-400 text-sm">
+          You finish a project. You're tired. You forget to ask for a review. Or you ask 3 months later when the excitement has faded.
+        </p>
+      </div>
+      <div>
+        <h3 className="text-sm font-bold text-blue-400 uppercase tracking-wider mb-3">The Automated Way</h3>
+        <p className="text-white text-sm">
+          Project marked "Complete" <IconArrowRight className="inline w-4 h-4 text-blue-400" /> Wait 2 days <IconArrowRight className="inline w-4 h-4 text-blue-400" /> Send email: "How did we do?" with a link to Google Reviews.
         </p>
       </div>
     </div>
@@ -130,14 +146,25 @@ tags: ["Workflows", "Efficiency", "Google Apps Script"]
 
 </div>
 
-{/* Conclusion Section */}
-<div className="bg-gray-900 text-white rounded-2xl p-8 my-12 text-center">
-  <h2 className="text-2xl font-bold mb-4 text-white">The Secret Weapon: Google Apps Script</h2>
-  <p className="text-gray-300 max-w-2xl mx-auto leading-relaxed">
-    Google Apps Script is the secret engine behind many of the automations I build. It’s a powerful tool that connects your Google Workspace apps — Gmail, Calendar, Drive, Sheets, and more — and lets you create custom workflows tailored to your business. 
-    <br/><br/>
-    <span className="text-white font-semibold">Think of it as your invisible assistant, working behind the scenes 24/7.</span>
+<div className="mt-16 bg-brand-dark border border-gray-800 rounded-2xl p-10 text-center">
+  <h2 className="text-2xl font-bold text-white mb-4">Which one will you build first?</h2>
+  <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
+    You don't need to do them all at once. Pick the one that causes you the most pain right now, and spend an hour setting it up. Your future self will thank you.
   </p>
+  <div className="flex flex-wrap justify-center gap-4">
+    <span className="inline-flex items-center px-4 py-2 rounded-full bg-gray-800 text-gray-300 text-sm font-mono border border-gray-700">
+      <IconRocket className="w-4 h-4 mr-2 text-brand-orange" /> Start Small
+    </span>
+    <span className="inline-flex items-center px-4 py-2 rounded-full bg-gray-800 text-gray-300 text-sm font-mono border border-gray-700">
+      <IconZap className="w-4 h-4 mr-2 text-brand-gold" /> Test Often
+    </span>
+    <span className="inline-flex items-center px-4 py-2 rounded-full bg-gray-800 text-gray-300 text-sm font-mono border border-gray-700">
+      <IconBot className="w-4 h-4 mr-2 text-brand-magenta" /> Iterate
+    </span>
+    <span className="inline-flex items-center px-4 py-2 rounded-full bg-gray-800 text-gray-300 text-sm font-mono border border-gray-700">
+      <IconSparkles className="w-4 h-4 mr-2 text-brand-purple" /> Enjoy Freedom
+    </span>
+  </div>
 </div>
 
 </div>
