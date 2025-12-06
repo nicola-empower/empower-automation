@@ -91,12 +91,38 @@ const faqs = [
                         make them do custom tasks for you automatically.
                     </p>
                     <p
-                        class="text-gray-300 font-mono border-l-4 border-brand-magenta pl-4 italic"
+                        class="text-gray-300 font-mono border-l-4 border-brand-magenta pl-4 italic mb-8"
                     >
                         "Instead of you manually copying data from a form to a
                         spreadsheet, then to an invoice, then to an email – I
                         write a script that does it all for you with one click."
                     </p>
+
+                    <a
+                        href="/ai-vs-code"
+                        class="group block bg-[#161b22] border border-gray-800 rounded-xl p-6 hover:border-brand-gold/50 transition-all hover:shadow-[0_0_30px_rgba(255,215,0,0.1)]"
+                    >
+                        <div
+                            class="flex items-center gap-3 text-brand-gold font-bold mb-2"
+                        >
+                            <span class="bg-brand-gold/10 p-2 rounded-lg"
+                                ><i data-lucide="zap" class="w-5 h-5"></i></span
+                            >
+                            The Reality Check
+                        </div>
+                        <p class="text-gray-400 text-sm mb-3">
+                            Thinking about using AI Agents instead? Before you
+                            commit, you need to see the threat assessment.
+                        </p>
+                        <div
+                            class="text-white font-mono text-sm group-hover:text-brand-gold transition-colors flex items-center gap-2"
+                        >
+                            Read the comparison <i
+                                data-lucide="arrow-right"
+                                class="w-4 h-4 group-hover:translate-x-1 transition-transform"
+                            ></i>
+                        </div>
+                    </a>
                 </div>
                 <div>
                     <DataPipeline client:visible />
@@ -367,6 +393,7 @@ const faqs = [
             Quote,
             ChevronDown,
             ArrowRight,
+            Zap,
         } from "lucide";
         createIcons({
             icons: {
@@ -376,6 +403,7 @@ const faqs = [
                 Quote,
                 ChevronDown,
                 ArrowRight,
+                Zap,
             },
         });
     </script>

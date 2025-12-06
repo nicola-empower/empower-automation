@@ -198,7 +198,7 @@ All rights reserved. © 2025 Nicola Berry, Empower Automation.
 
 ##  Links
 
-- **Website**: [empower-automation.com](https://empowerautomations.co.uk)
+- **Website**: [empowerautomation.co.uk](https://empowerautomation.co.uk)
 - **LinkedIn**: [Nicola Berry](https://linkedin.com/in/empowervaservices)
 
 ---

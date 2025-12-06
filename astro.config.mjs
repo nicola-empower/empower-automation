@@ -11,7 +11,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://empower-automation.com',
+  site: 'https://empowerautomation.co.uk',
   vite: {
     plugins: [tailwindcss()]
   },
