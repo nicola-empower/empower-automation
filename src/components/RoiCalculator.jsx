@@ -62,7 +62,7 @@ export default function RoiCalculator() {
 
         try {
             // Replace with your actual Web App URL
-            const WEB_APP_URL = "https://script.google.com/macros/s/INSERT_YOUR_WEB_APP_URL_HERE/exec";
+            const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbx5N5VINi4h1tZKV1o-MFbdmAP1kgpCYOZVbFvLec1v4Tp9_WRY53vVJjqBohpYAZNz/exec";
 
             await fetch(WEB_APP_URL, {
                 method: 'POST',
