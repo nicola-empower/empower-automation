@@ -46,10 +46,10 @@ import TypewriterText from "./TypewriterText";
                 </div>
 
                 <div class="space-y-4">
-                    <div class="text-green-400">
+                    <div id="terminal-status-line" class="text-green-400">
                         > DETECTING INEFFICIENCIES...
                     </div>
-                    <div class="text-gray-300 pl-4">
+                    <div id="terminal-output-block" class="text-gray-300 pl-4">
                         [!] Found: 15 hours of manual data entry/week<br />
                         [!] Found: High risk of human error<br />
                         [!] Found: Disconnected systems
@@ -90,6 +90,43 @@ import TypewriterText from "./TypewriterText";
         </div>
     </div>
 </section>
+
+<script>
+    // MAGIC WELCOME LOGIC
+    document.addEventListener("DOMContentLoaded", () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get("name");
+        const company = urlParams.get("company");
+
+        if (name) {
+            const statusLine = document.getElementById("terminal-status-line");
+            const outputBlock = document.getElementById(
+                "terminal-output-block",
+            );
+
+            if (statusLine && outputBlock) {
+                // Typewriter effect simulation for the status line
+                statusLine.innerHTML = "> CONNECTING...";
+
+                setTimeout(() => {
+                    statusLine.innerHTML = `> DETECTING VISITOR... [====================] 100%`;
+                    statusLine.classList.add("text-brand-gold");
+
+                    // Rewriting the output block
+                    let content = `> WELCOME, <span class="text-brand-orange font-bold">${name.toUpperCase()}</span>.<br/>`;
+                    if (company) {
+                        content += `> TARGET SYSTEM: <span class="text-blue-400">${company.toUpperCase()} OPERATIONS</span>.<br/>`;
+                    }
+                    content += `> STATUS: <span class="text-green-500 font-bold">READY TO OPTIMISE</span>.`;
+
+                    outputBlock.innerHTML = content;
+                    outputBlock.classList.remove("text-gray-300");
+                    outputBlock.classList.add("text-white", "leading-loose");
+                }, 800);
+            }
+        }
+    });
+</script>
 
 <style>
     @keyframes fade-in {
