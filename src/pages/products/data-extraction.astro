@@ -18,6 +18,15 @@ import {
     Bot,
     Quote,
     CheckCircle,
+    Tag,
+    TrendingUp,
+    MessageSquareText,
+    Briefcase,
+    Home,
+    MapPin,
+    Newspaper,
+    Landmark,
+    Plane,
 } from "lucide-react";
 ---
 
@@ -102,7 +111,357 @@ import {
             </div>
         </section>
 
-        <!-- The Solution Visualization -->
+        <!-- Use Cases Section -->
+        <section class="px-4 max-w-7xl mx-auto mb-24">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-white mb-6">
+                    What else can we automate?
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    From market intelligence to lead generation, our extraction
+                    engines can be tailored to any public data source.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Use Case 1 -->
+                <div
+                    class="bg-[#161b22] border border-slate-800 p-6 rounded-xl hover:border-brand-orange transition-colors group"
+                >
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="bg-brand-orange/10 p-3 rounded-lg text-brand-orange group-hover:scale-110 transition-transform"
+                        >
+                            <Tag className="w-6 h-6" />
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white mb-2">
+                                Price Monitoring
+                            </h3>
+                            <p class="text-xs text-gray-400 leading-relaxed">
+                                Extract competitor prices, stock levels, and
+                                promotions to optimize your own pricing in
+                                real-time.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Use Case 2 -->
+                <div
+                    class="bg-[#161b22] border border-slate-800 p-6 rounded-xl hover:border-brand-magenta transition-colors group"
+                >
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="bg-brand-magenta/10 p-3 rounded-lg text-brand-magenta group-hover:scale-110 transition-transform"
+                        >
+                            <TrendingUp className="w-6 h-6" />
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white mb-2">
+                                Market Research
+                            </h3>
+                            <p class="text-xs text-gray-400 leading-relaxed">
+                                Gather large datasets on product features and
+                                industry shifts to identify emerging trends.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Use Case 3 -->
+                <div
+                    class="bg-[#161b22] border border-slate-800 p-6 rounded-xl hover:border-brand-gold transition-colors group"
+                >
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="bg-brand-gold/10 p-3 rounded-lg text-brand-gold group-hover:scale-110 transition-transform"
+                        >
+                            <MessageSquareText className="w-6 h-6" />
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white mb-2">
+                                Sentiment Analysis
+                            </h3>
+                            <p class="text-xs text-gray-400 leading-relaxed">
+                                Scrape public reviews and discussions to
+                                understand brand perception and customer pain
+                                points.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Use Case 4 -->
+                <div
+                    class="bg-[#161b22] border border-slate-800 p-6 rounded-xl hover:border-blue-500 transition-colors group"
+                >
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="bg-blue-500/10 p-3 rounded-lg text-blue-500 group-hover:scale-110 transition-transform"
+                        >
+                            <Briefcase className="w-6 h-6" />
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white mb-2">
+                                Job Market Analysis
+                            </h3>
+                            <p class="text-xs text-gray-400 leading-relaxed">
+                                Aggregate job postings to track salary trends,
+                                skill demand, and recruitment strategies.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Use Case 5 -->
+                <div
+                    class="bg-[#161b22] border border-slate-800 p-6 rounded-xl hover:border-green-500 transition-colors group"
+                >
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="bg-green-500/10 p-3 rounded-lg text-green-500 group-hover:scale-110 transition-transform"
+                        >
+                            <Home className="w-6 h-6" />
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white mb-2">
+                                Real Estate Aggregation
+                            </h3>
+                            <p class="text-xs text-gray-400 leading-relaxed">
+                                Collect property listings and rental rates for
+                                investment modeling and market comparisons.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Use Case 6 -->
+                <div
+                    class="bg-[#161b22] border border-slate-800 p-6 rounded-xl hover:border-red-500 transition-colors group"
+                >
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="bg-red-500/10 p-3 rounded-lg text-red-500 group-hover:scale-110 transition-transform"
+                        >
+                            <MapPin className="w-6 h-6" />
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white mb-2">
+                                Location Data
+                            </h3>
+                            <p class="text-xs text-gray-400 leading-relaxed">
+                                Build directories of business locations, hours,
+                                and details for logistics and local SEO.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Use Case 7 -->
+                <div
+                    class="bg-[#161b22] border border-slate-800 p-6 rounded-xl hover:border-purple-500 transition-colors group"
+                >
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="bg-purple-500/10 p-3 rounded-lg text-purple-500 group-hover:scale-110 transition-transform"
+                        >
+                            <Newspaper className="w-6 h-6" />
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white mb-2">
+                                Media Monitoring
+                            </h3>
+                            <p class="text-xs text-gray-400 leading-relaxed">
+                                Aggregate headlines and articles for PR tracking
+                                and competitive news feeds.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Use Case 8 -->
+                <div
+                    class="bg-[#161b22] border border-slate-800 p-6 rounded-xl hover:border-teal-500 transition-colors group"
+                >
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="bg-teal-500/10 p-3 rounded-lg text-teal-500 group-hover:scale-110 transition-transform"
+                        >
+                            <Landmark className="w-6 h-6" />
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white mb-2">
+                                Financial Data
+                            </h3>
+                            <p class="text-xs text-gray-400 leading-relaxed">
+                                Extract public financial reports and market data
+                                for investment research.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Use Case 9 -->
+                <div
+                    class="bg-[#161b22] border border-slate-800 p-6 rounded-xl hover:border-yellow-500 transition-colors group"
+                >
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="bg-yellow-500/10 p-3 rounded-lg text-yellow-500 group-hover:scale-110 transition-transform"
+                        >
+                            <Search className="w-6 h-6" />
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white mb-2">
+                                SEO Research
+                            </h3>
+                            <p class="text-xs text-gray-400 leading-relaxed">
+                                Scrape SERPs and keywords to reverse-engineer
+                                competitor strategies.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Use Case 10 -->
+                <div
+                    class="bg-[#161b22] border border-slate-800 p-6 rounded-xl hover:border-sky-500 transition-colors group md:col-span-2 lg:col-span-3"
+                >
+                    <div class="flex items-start gap-4">
+                        <div
+                            class="bg-sky-500/10 p-3 rounded-lg text-sky-500 group-hover:scale-110 transition-transform"
+                        >
+                            <Plane className="w-6 h-6" />
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-white mb-2">
+                                Travel Rate Comparison
+                            </h3>
+                            <p class="text-xs text-gray-400 leading-relaxed">
+                                Extract real-time pricing for flights and hotels
+                                to power comparison tools and find deals.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Real World Example -->
+        <section class="px-4 max-w-6xl mx-auto mb-24">
+            <div
+                class="bg-gradient-to-br from-[#161b22] to-brand-dark border border-slate-800 rounded-3xl overflow-hidden shadow-2xl"
+            >
+                <div class="grid md:grid-cols-2">
+                    <div class="p-8 md:p-12 flex flex-col justify-center">
+                        <div
+                            class="inline-block px-3 py-1 bg-brand-gold/10 text-brand-gold text-xs font-bold rounded-full mb-6 w-fit"
+                        >
+                            CASE STUDY
+                        </div>
+                        <h2 class="text-3xl font-bold text-white mb-6">
+                            Automating Lead Gen
+                        </h2>
+                        <h3 class="text-xl text-brand-orange mb-4">
+                            The Challenge
+                        </h3>
+                        <p class="text-gray-400 mb-6">
+                            A web agency spent 10+ hours a week looking for
+                            local businesses with outdated websites. Their
+                            process was "click, look, copy-paste".
+                        </p>
+                        <h3
+                            class="text-xl text-brand-green mb-4 text-green-400"
+                        >
+                            The Solution
+                        </h3>
+                        <p class="text-gray-400 mb-8">
+                            We built a scraper that audited 500+ local domains
+                            weekly. It filtered for:
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3 text-gray-300">
+                                <span class="w-2 h-2 bg-red-500 rounded-full"
+                                ></span>
+                                Missing SSL Certificates
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-300">
+                                <span class="w-2 h-2 bg-red-500 rounded-full"
+                                ></span>
+                                Slow Load Times (>3s)
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-300">
+                                <span class="w-2 h-2 bg-red-500 rounded-full"
+                                ></span>
+                                Non-Mobile Responsive
+                            </li>
+                        </ul>
+                        <div
+                            class="p-4 bg-slate-800/50 rounded-lg border border-slate-700"
+                        >
+                            <p class="text-white font-mono text-sm">
+                                "This tool didn't just find leads; it gave us
+                                the *reason* to call them. Conversion rates
+                                tripled."
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="bg-slate-900 border-l border-slate-800 relative hidden md:block group"
+                    >
+                        <!-- Abstract Code/Data Visual -->
+                        <div
+                            class="absolute inset-0 p-8 font-mono text-xs opacity-60 overflow-hidden select-none"
+                        >
+                            <div class="text-purple-400">
+                                const targetRequirements = `{
+                                    `;</div>
+                            <div class="pl-4 text-blue-300">hasSSL: <span class="text-red-400">false</span>,</div>
+                            <div class="pl-4 text-blue-300">mobileResponsive: <span class="text-red-400">false</span>,</div>
+                            <div class="pl-4 text-blue-300">loadTime: <span class="text-yellow-400">"> 3s"</span></div>
+                            <div class="text-purple-400">`
+                                };
+                            </div>
+                            <br />
+                            <div class="text-green-400">
+                                // Scanning Sector 7G...
+                            </div>
+                            <div class="text-gray-500">
+                                Analysing domain: cafe-downtown.com ... <span
+                                    class="text-red-400">[FAIL]</span
+                                >
+                            </div>
+                            <div class="text-gray-500">
+                                Analyzing domain: smith-plumbing.co.uk ... <span
+                                    class="text-green-400">[PASS]</span
+                                > -> <span class="text-brand-gold"
+                                    >MATCH FOUND</span
+                                >
+                            </div>
+                            <div class="text-gray-500">
+                                Analysing domain: yoga-studio-main.net ... <span
+                                    class="text-red-400">[FAIL]</span
+                                >
+                            </div>
+                            <br />
+                            <div class="text-blue-400">
+                                exporting match tocrm_database...
+                            </div>
+                            <div class="text-green-400">
+                                Done. 1 High-Value Lead Added.
+                            </div>
+                        </div>
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-[#161b22] via-transparent to-transparent"
+                        >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Solution Visualization (Moved) -->
         <section class="px-4 max-w-7xl mx-auto mb-24">
             <div class="text-center mb-16">
                 <h2 class="text-3xl font-bold text-white mb-6">
@@ -218,119 +577,6 @@ import {
                             Clean, verified data is exported to CSV or pushed
                             directly into your Google Sheets/CRM.
                         </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Real World Example -->
-        <section class="px-4 max-w-6xl mx-auto mb-24">
-            <div
-                class="bg-gradient-to-br from-[#161b22] to-brand-dark border border-slate-800 rounded-3xl overflow-hidden shadow-2xl"
-            >
-                <div class="grid md:grid-cols-2">
-                    <div class="p-8 md:p-12 flex flex-col justify-center">
-                        <div
-                            class="inline-block px-3 py-1 bg-brand-gold/10 text-brand-gold text-xs font-bold rounded-full mb-6 w-fit"
-                        >
-                            CASE STUDY
-                        </div>
-                        <h2 class="text-3xl font-bold text-white mb-6">
-                            Automating Lead Gen
-                        </h2>
-                        <h3 class="text-xl text-brand-orange mb-4">
-                            The Challenge
-                        </h3>
-                        <p class="text-gray-400 mb-6">
-                            A web agency spent 10+ hours a week looking for
-                            local businesses with outdated websites. Their
-                            process was "click, look, copy-paste".
-                        </p>
-                        <h3
-                            class="text-xl text-brand-green mb-4 text-green-400"
-                        >
-                            The Solution
-                        </h3>
-                        <p class="text-gray-400 mb-8">
-                            We built a scraper that audited 500+ local domains
-                            weekly. It filtered for:
-                        </p>
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-center gap-3 text-gray-300">
-                                <span class="w-2 h-2 bg-red-500 rounded-full"
-                                ></span>
-                                Missing SSL Certificates
-                            </li>
-                            <li class="flex items-center gap-3 text-gray-300">
-                                <span class="w-2 h-2 bg-red-500 rounded-full"
-                                ></span>
-                                Slow Load Times (>3s)
-                            </li>
-                            <li class="flex items-center gap-3 text-gray-300">
-                                <span class="w-2 h-2 bg-red-500 rounded-full"
-                                ></span>
-                                Non-Mobile Responsive
-                            </li>
-                        </ul>
-                        <div
-                            class="p-4 bg-slate-800/50 rounded-lg border border-slate-700"
-                        >
-                            <p class="text-white font-mono text-sm">
-                                "This tool didn't just find leads; it gave us
-                                the *reason* to call them. Conversion rates
-                                tripled."
-                            </p>
-                        </div>
-                    </div>
-                    <div
-                        class="bg-slate-900 border-l border-slate-800 relative hidden md:block group"
-                    >
-                        <!-- Abstract Code/Data Visual -->
-                        <div
-                            class="absolute inset-0 p-8 font-mono text-xs opacity-60 overflow-hidden select-none"
-                        >
-                            <div class="text-purple-400">
-                                const targetRequirements = `{
-                                    `;</div>
-                            <div class="pl-4 text-blue-300">hasSSL: <span class="text-red-400">false</span>,</div>
-                            <div class="pl-4 text-blue-300">mobileResponsive: <span class="text-red-400">false</span>,</div>
-                            <div class="pl-4 text-blue-300">loadTime: <span class="text-yellow-400">"> 3s"</span></div>
-                            <div class="text-purple-400">`
-                                };
-                            </div>
-                            <br />
-                            <div class="text-green-400">
-                                // Scanning Sector 7G...
-                            </div>
-                            <div class="text-gray-500">
-                                Analysing domain: cafe-downtown.com ... <span
-                                    class="text-red-400">[FAIL]</span
-                                >
-                            </div>
-                            <div class="text-gray-500">
-                                Analyzing domain: smith-plumbing.co.uk ... <span
-                                    class="text-green-400">[PASS]</span
-                                > -> <span class="text-brand-gold"
-                                    >MATCH FOUND</span
-                                >
-                            </div>
-                            <div class="text-gray-500">
-                                Analysing domain: yoga-studio-main.net ... <span
-                                    class="text-red-400">[FAIL]</span
-                                >
-                            </div>
-                            <br />
-                            <div class="text-blue-400">
-                                exporting match tocrm_database...
-                            </div>
-                            <div class="text-green-400">
-                                Done. 1 High-Value Lead Added.
-                            </div>
-                        </div>
-                        <div
-                            class="absolute inset-0 bg-gradient-to-t from-[#161b22] via-transparent to-transparent"
-                        >
-                        </div>
                     </div>
                 </div>
             </div>
@@ -454,7 +700,7 @@ import {
                     See The Value
                 </h2>
                 <h3 class="text-xl text-brand-orange mb-12 relative z-10">
-                    Stop doing £12/hr work yourself.
+                    Stop doing the heavy lifting yourself.
                 </h3>
 
                 <div class="grid md:grid-cols-3 gap-8 relative z-10 text-left">
