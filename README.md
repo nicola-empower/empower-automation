@@ -14,69 +14,51 @@ This website showcases automation services through an interactive, developer-the
 - **UI Library**: [React](https://react.dev) v19.2.0 - For interactive components
 - **Styling**: [Tailwind CSS](https://tailwindcss.com) v4.1.17 - Utility-first CSS framework
 - **Icons**: [Lucide React](https://lucide.dev) - Beautiful, consistent icon set
-- **Content**: [MDX](https://mdxjs.com) - Markdown with JSX for rich content
-- **Analytics**: [Vercel Analytics](https://vercel.com/analytics) - Privacy-friendly web analytics
+- **Backend & Database**: **Google Apps Script** (Serverless) + **Google Sheets** (NoSQL-like DB)
 - **Deployment**: [Vercel](https://vercel.com) - Edge network deployment
 - **Fonts**: Inter (UI), JetBrains Mono (code)
 
 ##  Key Features
 
-### Interactive Tools
-- **ROI Calculator**: React-based tool calculating annual savings and break-even time for automation investments
-- **Automation Logic Gate**: Interactive decision tree helping users determine if tasks are worth automating
-- **Lead Capture**: Both tools integrate with Google Apps Script backend for lead generation and automated email reports
+### 🚀 "Wow" Factors
+- **Magic Welcome**: URL-based personalization engine (e.g., `?name=Elon&company=SpaceX` rewrites the terminal hero text).
+- **Live Savings Ticker**: Matrix-style top bar calculating "Total Hours Saved" for clients in real-time.
+- **Terminal Aesthetic**: Custom dark-mode design inspired by developer environments (VS Code/Terminal).
 
-### Content System
+### 🤖 Lead Generation & Backend
+- **Unified Backend**: A single Google Apps Script handles all form submissions (Serverless & Free).
+- **ROI Calculator**: React-based tool calculating annual savings and break-even time -> Data sent to Sheets -> Auto-email notification.
+- **Automation Logic Gate**: Interactive decision tree quiz -> Leads captured in Sheets.
+- **Contact Form**: Secure submission directly to Google Sheets with instant email alerts to admin.
+
+### 📚 Content System
 - **System Logs**: 21 educational blog posts in MDX format with custom styling, Lucide icons, and dark theme
 - **Product Pages**: Dedicated landing pages for "Automated Invoice" and "Smarter Work Day" packages
 - **Service Pages**: Comprehensive service descriptions with code examples and pricing
 
-### Design & UX
-- **Terminal Aesthetic**: Custom dark-mode design inspired by developer environments (VS Code/Terminal)
-- **Code Theming**: Syntax-highlighted code blocks using Dracula theme
-- **Responsive Design**: Mobile-first approach with smooth animations
-- **Brand Colors**: Orange (#FF6B35), Magenta (#E91E63), Purple (#9C27B0), Gold (#FDB713)
-
-### Performance & SEO
-- **Optimized Images**: Astro Image component with automatic WebP/AVIF conversion
-- **Sitemap**: Auto-generated XML sitemap for search engines
-- **Meta Tags**: Comprehensive Open Graph and Twitter Card support
-- **Analytics**: Vercel Analytics with Web Vitals tracking
-- **Lighthouse Ready**: Optimized for 100/100 scores
+### 🔒 Privacy & Compliance (UK Laws)
+- **Strictly No Cookies**: No analytics, trackers, or pixels.
+- **GDPR Compliant**: Explicit data retention (1 year) and destruction policies.
+- **Legal Protection**: Conditional software licensing (Protection against non-payment).
 
 ##  Project Structure
 
 ```
 empower-automation/
-├── public/
-│   ├── favicon.svg
-│   └── robots.txt
+├── backend/
+│   └── google-apps-script.js  # The Brain: Handles all API requests & Emails
 ├── src/
-│   ├── assets/              # Optimized images
-│   │   ├── portfolio.jpg
-│   │   ├── automation-autopsy-feature.png
-│   │   └── hero-background.png
-│   ├── components/          # Reusable components
-│   │   ├── Navbar.astro
-│   │   ├── Footer.astro
-│   │   ├── TerminalHero.astro
-│   │   ├── CodePricing.astro
-│   │   ├── DataPipeline.tsx
-│   │   └── TypewriterText.tsx
-│   ├── content/
-│   │   └── system-logs/     # 21 MDX blog posts
-│   ├── layouts/
-│   │   └── Layout.astro     # Base layout with SEO
+│   ├── components/
+│   │   ├── SavingsTicker.tsx  # Live counter component
+│   │   ├── TerminalHero.astro # "Magic Welcome" logic
+│   │   ├── Navbar.astro       # Global Nav
+│   │   └── Footer.astro       # Legally Compliant Footer
 │   ├── pages/
-│   │   ├── index.astro      # Homepage
-│   │   ├── contact.astro
-│   │   ├── products/        # Product landing pages
-│   │   ├── services/        # Service pages
-│   │   └── system-logs/     # Blog system
-│   └── styles/
-│       └── global.css       # Tailwind imports
-├── astro.config.mjs         # Astro configuration
-├── tailwind.config.js       # Tailwind configuration
+│   │   ├── index.astro        # Homepage
+│   │   ├── privacy.astro      # Custom "No Tracking" Policy
+│   │   ├── terms.astro        # Custom Automation Terms
+│   │   └── products/          # Product landing pages
+│   └── content/               # MDX Blog Posts
 └── package.json
 ```
 
@@ -107,12 +89,6 @@ empower-automation/
 
 4. Open [http://localhost:4321](http://localhost:4321) in your browser
 
-### Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build locally
-
 ##  Design System
 
 ### Brand Colors
@@ -129,70 +105,19 @@ empower-automation/
 - **Body**: Inter (sans-serif)
 - **Code**: JetBrains Mono (monospace)
 
-### Components
-All components follow a dark-theme, terminal-inspired aesthetic with:
-- Gradient borders and hover effects
-- Syntax-highlighted code blocks
-- Smooth transitions and animations
-- Responsive grid layouts
-
-##  Content Management
-
-### Adding System Logs (Blog Posts)
-
-1. Create a new `.mdx` file in `src/content/system-logs/`
-2. Add frontmatter:
-   ```yaml
-   ---
-   title: "Your Post Title"
-   description: "Brief description"
-   pubDate: "2025-12-01"
-   tags: ["Tag1", "Tag2"]
-   ---
-   ```
-3. Use MDX syntax with Lucide icons:
-   ```jsx
-   <IconCheckCircle className="w-6 h-6 text-brand-gold" />
-   ```
-
-### Updating Products/Services
-
-Product pages are located in `src/pages/products/` and `src/pages/services/`. Each is a standalone Astro component with custom layouts.
-
-##  Deployment
-
-This project is configured for **Vercel** deployment:
-
-1. Push to GitHub
-2. Import project in Vercel
-3. Deploy automatically on push to main branch
-
-**Environment**: Static site (no server-side rendering)
-
 ##  SEO Features
 
 - ✅ XML Sitemap (`/sitemap-index.xml`)
 - ✅ robots.txt
 - ✅ Canonical URLs
 - ✅ Open Graph meta tags
-- ✅ Twitter Card meta tags
 - ✅ Structured data ready
 - ✅ Optimized images (WebP/AVIF)
 - ✅ Fast page loads (<1s)
-- ✅ Prerendered static pages for max speed
-- ✅ Social sharing optimized (OG Images)
-
-##  Analytics
-
-Vercel Analytics is integrated with:
-- Page views tracking
-- Web Vitals monitoring
-- Privacy-friendly (no cookies)
-- Real-time dashboard
 
 ##  Contributing
 
-This is a private project for Empower Automation. For inquiries, contact [nicola@empowerdigitalsolutions.co.uk](mailto:nicola@empowerdigitalsolutions.co.uk).
+This is a private project for Empower Automation. For inquiries, contact [nicola@empowerautomation.co.uk](mailto:nicola@empowerautomation.co.uk).
 
 ##  License
 
@@ -205,4 +130,4 @@ All rights reserved. © 2025 Nicola Berry, Empower Automation.
 
 ---
 
-**Built by Nicola Berry**
+**Designed & Built by Empower Digital Solutions**
