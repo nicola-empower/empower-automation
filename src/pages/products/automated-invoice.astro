@@ -13,6 +13,8 @@ import {
     ChevronDown,
     Quote,
 } from "lucide-react";
+import { Image } from "astro:assets";
+import invoiceWorkflowImg from "../../assets/automated-invoice-workflow.png";
 ---
 
 <Layout title="Automated Invoice Workflow | Empower Automation">
@@ -69,12 +71,15 @@ import {
                     class="bg-[#161b22] p-4 rounded-xl border border-slate-800"
                 >
                     <!-- Placeholder for Infographic -->
+                    <!-- Infographic -->
                     <div
-                        class="aspect-[4/3] bg-brand-dark rounded-lg flex items-center justify-center border border-slate-700"
+                        class="rounded-lg overflow-hidden border border-slate-700"
                     >
-                        <span class="text-gray-500 font-mono"
-                            >Infographic: 5-Step Process</span
-                        >
+                        <Image
+                            src={invoiceWorkflowImg}
+                            alt="5-Step Automated Invoice Workflow Infographic"
+                            class="w-full h-auto object-contain"
+                        />
                     </div>
                 </div>
                 <div>

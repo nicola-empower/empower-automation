@@ -33,7 +33,7 @@ This website showcases automation services through an interactive, developer-the
 
 ### 📚 Content System
 - **System Logs**: 21 educational blog posts in MDX format with custom styling, Lucide icons, and dark theme
-- **Product Pages**: Dedicated landing pages for "Automated Invoice" and "Smarter Work Day" packages
+- **Product Pages**: Dedicated landing pages for "Automated Invoice", "Web Data Extraction", and "Smarter Work Day" packages
 - **Service Pages**: Comprehensive service descriptions with code examples and pricing
 
 ### 🔒 Privacy & Compliance (UK Laws)
