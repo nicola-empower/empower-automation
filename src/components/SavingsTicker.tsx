@@ -3,10 +3,9 @@ import { motion } from "framer-motion";
 
 export default function SavingsTicker() {
     const [hours, setHours] = useState(1420);
-    const [mounted, setMounted] = useState(false);
+
 
     useEffect(() => {
-        setMounted(true);
         // Increment randomly to simulate live data
         const interval = setInterval(() => {
             setHours((prev) => prev + Math.floor(Math.random() * 3));
@@ -15,7 +14,8 @@ export default function SavingsTicker() {
         return () => clearInterval(interval);
     }, []);
 
-    if (!mounted) return null;
+    // Removed mounted check to prevent CLS
+
 
     return (
         <div className="bg-[#0a0c10] border-b border-gray-800 py-2 px-4 flex justify-center items-center">

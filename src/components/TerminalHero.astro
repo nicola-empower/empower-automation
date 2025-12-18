@@ -13,6 +13,8 @@ import TypewriterText from "./TypewriterText";
             src={heroBg}
             alt="Cyber Industrial Background"
             class="w-full h-full object-cover"
+            loading="eager"
+            fetchpriority="high"
         />
         <div
             class="absolute inset-0 bg-gradient-to-b from-brand-dark via-transparent to-brand-dark"
@@ -21,6 +23,7 @@ import TypewriterText from "./TypewriterText";
     </div>
 
     <!-- Terminal Window -->
+    <h1 class="sr-only">Empower Automation - Google Workspace Specialist</h1>
     <div class="relative z-10 w-full max-w-4xl mx-4">
         <div
             class="bg-[#0d1117]/90 backdrop-blur-md border border-gray-700 rounded-lg shadow-2xl overflow-hidden"
@@ -61,12 +64,14 @@ import TypewriterText from "./TypewriterText";
                         >$ ./execute_solution.js
                     </div>
 
-                    <TypewriterText
-                        client:visible
-                        text="Stop Doing Repetitive Tasks Manually."
-                        className="text-2xl md:text-4xl font-bold text-white mt-2 block"
-                        delay={1.5}
-                    />
+                    <div class="min-h-[3rem] md:min-h-[4rem]">
+                        <TypewriterText
+                            client:visible
+                            text="Stop Doing Repetitive Tasks Manually."
+                            className="text-2xl md:text-4xl font-bold text-white mt-2 block"
+                            delay={1.5}
+                        />
+                    </div>
 
                     <div
                         class="mt-8 flex flex-wrap gap-4 opacity-0 animate-fade-in"
