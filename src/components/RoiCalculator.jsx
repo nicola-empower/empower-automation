@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Calculator, ArrowRight, TrendingUp, AlertTriangle, CheckCircle } from 'lucide-react';
+import { Calculator, ArrowRight, TrendingUp, AlertTriangle, CheckCircle, Bug } from 'lucide-react';
 
 export default function RoiCalculator() {
     // 1. STATE: The Inputs
@@ -7,6 +7,7 @@ export default function RoiCalculator() {
         frequency: 10,      // Times per week
         minutes: 15,        // Mins per task
         rate: 30,           // Hourly rate (£)
+        errorRate: 5,       // % of tasks with errors
         saasCost: 0,        // Current Zapier/Make spend (£/mo)
         buildCost: 750      // Estimated Custom Build Cost (Hidden variable or slider)
     });
@@ -21,15 +22,20 @@ export default function RoiCalculator() {
         const annualManualCost = weeklyCost * 52;
         const monthlyManualCost = weeklyCost * 4.33;
 
+        // Hidden Error Cost (The "3x Rule": Fixing a mistake takes 3x longer than doing it right)
+        // Cost = (Manual Cost * Error Rate) * 3
+        const annualErrorCost = (annualManualCost * (inputs.errorRate / 100)) * 3;
+        const monthlyErrorCost = annualErrorCost / 12;
+
         // Annual SaaS Cost
         const annualSaasCost = inputs.saasCost * 12;
 
-        // Total Annual "Rental" Cost (Manual + SaaS)
-        const totalAnnualDrain = annualManualCost + annualSaasCost;
+        // Total Annual "Rental" Cost (Manual + Errors + SaaS)
+        const totalAnnualDrain = annualManualCost + annualErrorCost + annualSaasCost;
 
         // Break Even Point (Months)
         // How long until the £750 custom script is cheaper than doing it manually?
-        const totalMonthlyDrain = monthlyManualCost + Number(inputs.saasCost);
+        const totalMonthlyDrain = monthlyManualCost + monthlyErrorCost + Number(inputs.saasCost);
         const breakEvenMonths = totalMonthlyDrain > 0
             ? (inputs.buildCost / totalMonthlyDrain).toFixed(1)
             : 0;
@@ -40,6 +46,7 @@ export default function RoiCalculator() {
 
         setResults({
             annualDrain: Math.round(totalAnnualDrain),
+            annualErrorCost: Math.round(annualErrorCost),
             breakEven: breakEvenMonths,
             threeYearSavings: Math.round(threeYearSavings),
             hoursSaved: Math.round(hoursPerWeek * 52)
@@ -129,7 +136,23 @@ export default function RoiCalculator() {
                         </div>
                     </div>
 
-                    {/* Input 3: Hourly Rate */}
+                    {/* Input 3: Error Rate (NEW) */}
+                    <div>
+                        <label className="block text-slate-400 mb-2">HUMAN_ERROR_RATE (%)</label>
+                        <div className="flex items-center gap-4">
+                            <input
+                                type="range" name="errorRate" min="0" max="25"
+                                value={inputs.errorRate} onChange={handleChange}
+                                className="w-full accent-red-500 h-2 bg-slate-800 rounded-lg appearance-none cursor-pointer"
+                            />
+                            <span className="bg-slate-800 text-white px-3 py-1 rounded border border-slate-700 w-16 text-center">
+                                {inputs.errorRate}%
+                            </span>
+                        </div>
+                        <p className="text-[10px] text-slate-600 mt-1">Assumption: Fixing a mistake takes 3x the initial time.</p>
+                    </div>
+
+                    {/* Input 4: Hourly Rate */}
                     <div>
                         <label className="block text-slate-400 mb-2">HOURLY_RATE (£)</label>
                         <div className="relative">
@@ -142,7 +165,7 @@ export default function RoiCalculator() {
                         </div>
                     </div>
 
-                    {/* Input 4: SaaS Cost */}
+                    {/* Input 5: SaaS Cost */}
                     <div>
                         <label className="block text-slate-400 mb-2">CURRENT_SAAS_SPEND (Zapier/Make £/mo)</label>
                         <div className="relative">
@@ -171,9 +194,11 @@ export default function RoiCalculator() {
                     <div className="text-4xl font-bold text-red-500 font-mono tracking-tighter">
                         -£{results?.annualDrain.toLocaleString()}
                     </div>
-                    <p className="text-xs text-slate-400 mt-2">
-                        You are losing <span className="text-white">{results?.hoursSaved} hours</span> per year to this task.
-                    </p>
+                    <div className="flex items-center gap-2 mt-2">
+                        <div className="text-xs bg-red-900/30 text-red-400 px-2 py-1 rounded-full border border-red-500/20">
+                            Includes £{results?.annualErrorCost.toLocaleString()} hidden error cost
+                        </div>
+                    </div>
                 </div>
 
                 {/* Card 2: The Break Even */}
