@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automation Maturity Assessment - Empower Automation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="print-theme.css">
+    <style>
+        .checklist-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .checkbox-circle {
+            width: 24px;
+            height: 24px;
+            border: 2px solid var(--border-color);
+            background: rgba(255, 255, 255, 0.05);
+            /* Screen only */
+            border-radius: 2px;
+            /* Tech square look - sharp corners */
+        }
+
+        @media print {
+            .checkbox-circle {
+                border: 2px solid #000;
+                background: none;
+            }
+        }
+
+        .score-section {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: var(--panel-bg);
+            border: 1px solid var(--accent-color);
+            border-radius: 4px;
+        }
+
+        @media print {
+            .score-section {
+                background: none;
+                border: 2px solid #000;
+            }
+
+            .score-section p,
+            .score-section div {
+                color: #000 !important;
+            }
+        }
+
+        .score-row {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .score-range {
+            font-family: var(--font-mono);
+            color: var(--secondary-color);
+            font-weight: bold;
+            min-width: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page">
+        <!-- Tech Decoration -->
+        <div class="scanline"></div>
+
+        <!-- Visible Brand Header (Screen + Print) -->
+        <div class="brand-header"
+            style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 2rem;">
+            <div class="brand-logo"
+                style="font-family: 'JetBrains Mono', monospace; font-weight: bold; font-size: 1.2rem; color: white;">
+                <span style="color:var(--accent-color)">&lt;</span>Empower<span
+                    style="color:var(--secondary-color)">/&gt;</span>
+            </div>
+            <a href="https://empowerautomation.co.uk" class="brand-url"
+                style="color: var(--text-color); font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; opacity: 0.7;">
+                empowerautomation.co.uk
+            </a>
+        </div>
+
+        <h1>Automation <span style="color:white; @media print {color:black;}">Maturity Score</span></h1>
+        <p style="font-size: 1.1rem; opacity: 0.8; margin-bottom: 2rem;">Where does your business stand? Tick the boxes
+            that apply to you.</p>
+
+        <section>
+            <!-- Q1 -->
+            <div class="checklist-item">
+                <p>1. I find myself copying and pasting data between two different apps at least once a day.</p>
+                <div class="checkbox-circle"></div>
+            </div>
+            <!-- Q2 -->
+            <div class="checklist-item">
+                <p>2. We still send invoices manually by creating a PDF and attaching it to an email.</p>
+                <div class="checkbox-circle"></div>
+            </div>
+            <!-- Q3 -->
+            <div class="checklist-item">
+                <p>3. If a lead contacts us on the weekend, they have to wait until Monday for a reply.</p>
+                <div class="checkbox-circle"></div>
+            </div>
+            <!-- Q4 -->
+            <div class="checklist-item">
+                <p>4. I have to remind my team (or myself) to follow up with clients.</p>
+                <div class="checkbox-circle"></div>
+            </div>
+            <!-- Q5 -->
+            <div class="checklist-item">
+                <p>5. We rely on spreadsheets that only one person really "knows how to fix".</p>
+                <div class="checkbox-circle"></div>
+            </div>
+            <!-- Q6 -->
+            <div class="checklist-item">
+                <p>6. Onboarding a new client involves sending multiple emails back and forth to get info.</p>
+                <div class="checkbox-circle"></div>
+            </div>
+            <!-- Q7 -->
+            <div class="checklist-item">
+                <p>7. I don't have a live dashboard showing me exactly how much money we made this week.</p>
+                <div class="checkbox-circle"></div>
+            </div>
+            <!-- Q8 -->
+            <div class="checklist-item">
+                <p>8. We essentially perform the same admin tasks every week, just with different names.</p>
+                <div class="checkbox-circle"></div>
+            </div>
+        </section>
+
+        <div class="score-section">
+            <h3
+                style="margin-top:0; border-bottom: 1px solid var(--accent-color); display:inline-block; padding-bottom:0.5rem; margin-bottom: 1rem;">
+                >> DIAGNOSTIC_RESULT</h3>
+            <p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 2rem;">Count how many boxes you ticked.</p>
+
+            <div class="score-row">
+                <div class="score-range">0 - 2</div>
+                <div>
+                    <strong>Efficient Operator.</strong> You have likely dealt with the low-hanging fruit. The next
+                    step: Deep Integration.
+                </div>
+            </div>
+
+            <div class="score-row">
+                <div class="score-range">3 - 5</div>
+                <div>
+                    <strong>The Danger Zone.</strong> You are growing, but your admin is growing faster. Risk of burnout
+                    is moderate.
+                </div>
+            </div>
+
+            <div class="score-row" style="border:none;">
+                <div class="score-range" style="color: #ff4444;">6 - 8</div>
+                <div>
+                    <strong>Manual Overload.</strong> You are efficiently working for your own admin processes.
+                    Immediate action recommended.
+                </div>
+            </div>
+        </div>
+
+        <footer style="margin-top: 3rem; text-align: center; color: #666; font-size: 0.9rem;">
+            Ready to improve your score? <a href="https://empowerautomation.co.uk/contact">Book a Free Audit</a>
+        </footer>
+    </div>
+
+</body>
+
+</html>

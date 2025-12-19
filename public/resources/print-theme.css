@@ -1,0 +1,222 @@
+/* Hybrid Theme: Cyber on Screen, Clean on Print */
+
+:root {
+    --bg-color: #0d1117;
+    --text-color: #e6edf3;
+    --accent-color: #f26f21;
+    --secondary-color: #fdb913;
+    --border-color: #30363d;
+    --panel-bg: #161b22;
+    --font-sans: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* SCREEN STYLES (Default) */
+body {
+    background-color: #050505;
+    /* Deep black background for the "void" outside the page */
+    color: var(--text-color);
+    font-family: var(--font-sans);
+    margin: 0;
+    padding: 40px 20px;
+    background-image: radial-gradient(#161b22 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+.page {
+    background-color: var(--bg-color);
+    max-width: 210mm;
+    margin: 0 auto;
+    padding: 20mm;
+    box-shadow: 0 0 40px rgba(242, 111, 33, 0.1);
+    position: relative;
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+    /* For corner accents */
+}
+
+/* Tech Decoration: Corner Brackets */
+.page::before,
+.page::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--accent-color);
+    transition: opacity 0.3s;
+}
+
+.page::before {
+    top: 10px;
+    left: 10px;
+    border-right: none;
+    border-bottom: none;
+}
+
+.page::after {
+    bottom: 10px;
+    right: 10px;
+    border-left: none;
+    border-top: none;
+}
+
+/* Tech Decoration: Scanline */
+.scanline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.1) 51%);
+    background-size: 100% 4px;
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-mono);
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+}
+
+h1 {
+    border-left: 4px solid var(--accent-color);
+    padding-left: 1rem;
+    color: var(--accent-color);
+    text-shadow: 0 0 10px rgba(242, 111, 33, 0.4);
+}
+
+h2 {
+    color: var(--secondary-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+    margin-top: 2.5rem;
+}
+
+/* Components */
+.stat-box,
+.checklist-item,
+.step {
+    background-color: var(--panel-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+}
+
+.highlight {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--accent-color);
+}
+
+/* PRINT STYLES (The transformation) */
+@media print {
+    body {
+        background: white !important;
+        background-image: none !important;
+        margin: 0;
+        padding: 0;
+        -webkit-print-color-adjust: exact;
+    }
+
+    .page {
+        background: white !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        border: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+    }
+
+    /* Remove screen-only decorations */
+    .page::before,
+    .page::after,
+    .scanline {
+        display: none !important;
+    }
+
+    h1 {
+        color: #000 !important;
+        border-left: 4px solid #000 !important;
+        text-shadow: none !important;
+    }
+
+    h2 {
+        color: #000 !important;
+        border-bottom: 2px solid #000 !important;
+    }
+
+    h3 {
+        color: #333 !important;
+    }
+
+    .stat-box,
+    .checklist-item,
+    .step {
+        background: none !important;
+        border: 1px solid #ccc !important;
+        color: #000 !important;
+    }
+
+    .checklist-item p,
+    .step-content p {
+        color: #000 !important;
+    }
+
+    a {
+        color: #000 !important;
+        border-bottom: 1px solid #000 !important;
+    }
+
+    /* Force background colors for specific indicators if needed */
+    .step-num {
+        background-color: #000 !important;
+        color: white !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* Print Branding Force-Show */
+    .brand-header {
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #000;
+        padding-bottom: 10px;
+        margin-bottom: 30px;
+    }
+
+    .brand-logo {
+        color: #000 !important;
+        font-weight: bold;
+        font-family: var(--font-mono);
+        font-size: 1.2rem;
+    }
+
+    .brand-url {
+        color: #000 !important;
+        font-family: var(--font-mono);
+        font-size: 0.9rem;
+        text-decoration: none;
+    }
+
+    /* Ensure links show their URL in print */
+    a[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8rem;
+        color: #666;
+    }
+
+    /* Exclude the brand header URL from having the duplicate text */
+    .brand-url::after {
+        display: none;
+    }
+}

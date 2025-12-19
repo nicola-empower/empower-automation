@@ -4,6 +4,7 @@ import { type CollectionEntry, getCollection } from "astro:content";
 import Layout from "../../layouts/Layout.astro";
 import Navbar from "../../components/Navbar.astro";
 import Footer from "../../components/Footer.astro";
+import LeadMagnet from "../../components/LeadMagnet.jsx";
 import {
     Inbox,
     Calendar,
@@ -227,6 +228,16 @@ const components = {
                 class="prose prose-invert prose-lg max-w-none prose-headings:font-mono prose-headings:text-white prose-a:text-brand-orange prose-code:text-brand-gold prose-pre:bg-[#0d1117] prose-pre:border prose-pre:border-gray-800"
             >
                 <Content components={components} />
+            </div>
+
+            <div class="mt-16 pt-8 border-t border-gray-800">
+                <LeadMagnet
+                    client:visible
+                    type="checklist"
+                    title="10-Step Automation Roadmap"
+                    description="Don't just automate randomly. Follow our proven roadmap to scale your operations systematically without breaking things."
+                    assetUrl="/resources/automation-roadmap.html"
+                />
             </div>
 
             <!-- Footer Navigation -->

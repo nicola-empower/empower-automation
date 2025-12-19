@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-Step Automation Roadmap - Empower Automation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="print-theme.css">
+    <style>
+        .step {
+            display: flex;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+            position: relative;
+            background: none !important;
+            border: none !important;
+        }
+
+        /* Circuit Line */
+        .step::before {
+            content: "";
+            position: absolute;
+            left: 19px;
+            top: 40px;
+            bottom: -40px;
+            width: 2px;
+            background: var(--border-color);
+            z-index: 0;
+        }
+
+        .step:last-child::before {
+            display: none;
+        }
+
+        @media print {
+            .step::before {
+                background: #ccc;
+            }
+        }
+
+        .step-num {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background: var(--panel-bg);
+            color: var(--accent-color);
+            border: 1px solid var(--accent-color);
+            border-radius: 0;
+            /* Tech Hex/Square */
+            transform: rotate(45deg);
+            /* Diamond shape */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-family: var(--font-mono);
+            z-index: 1;
+            margin-top: 5px;
+            box-shadow: 0 0 10px rgba(242, 111, 33, 0.2);
+        }
+
+        .step-num span {
+            transform: rotate(-45deg);
+            /* Counter-rotate text */
+        }
+
+        .phase-label {
+            font-family: var(--font-mono);
+            font-size: 0.8rem;
+            color: var(--secondary-color);
+            background: rgba(253, 185, 19, 0.1);
+            padding: 4px 12px;
+            display: inline-block;
+            margin: 1.5rem 0 1rem 3.5rem;
+            border-left: 2px solid var(--secondary-color);
+        }
+
+        @media print {
+            .phase-label {
+                color: #000;
+                background: #eee;
+                border: 1px solid #ccc;
+                border-left: 2px solid #000;
+            }
+
+            .step-num {
+                border-radius: 50%;
+                transform: none;
+                box-shadow: none;
+                border-color: #000;
+                color: #000;
+                background: white;
+            }
+
+            .step-num span {
+                transform: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page">
+        <!-- Tech Decoration -->
+        <div class="scanline"></div>
+
+        <!-- Visible Brand Header (Screen + Print) -->
+        <div class="brand-header"
+            style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-color); padding-bottom: 1rem; margin-bottom: 2rem;">
+            <div class="brand-logo"
+                style="font-family: 'JetBrains Mono', monospace; font-weight: bold; font-size: 1.2rem; color: white;">
+                <span style="color:var(--accent-color)">&lt;</span>Empower<span
+                    style="color:var(--secondary-color)">/&gt;</span>
+            </div>
+            <a href="https://empowerautomation.co.uk" class="brand-url"
+                style="color: var(--text-color); font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; opacity: 0.7;">
+                empowerautomation.co.uk
+            </a>
+        </div>
+
+        <h1>The Automation <span style="color:white; @media print {color:black;}">Roadmap</span></h1>
+
+        <!-- Phase 1 -->
+        <div class="phase-label">PHASE_1 // FOUNDATION</div>
+
+        <div class="step">
+            <div class="step-num"><span>01</span></div>
+            <div>
+                <h3>The Time Audit</h3>
+                <p>Track your time for 3 days. Highlight every task that is repetitive, requires no creativity, and
+                    involves moving data. These are your targets.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-num"><span>02</span></div>
+            <div>
+                <h3>Standardise the Process</h3>
+                <p>You cannot automate chaos. Write down the exact steps for your target task (e.g., "Invoice
+                    Creation"). If the steps change every time, you need to fix the process first.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-num"><span>03</span></div>
+            <div>
+                <h3>Centralise Your Data</h3>
+                <p>Ensure your 'truth' lives in one place (e.g., a Master Google Sheet or CRM), not scattered across
+                    sticky notes and email inboxes.</p>
+            </div>
+        </div>
+
+        <!-- Phase 2 -->
+        <div class="phase-label">PHASE_2 // IMPLEMENTATION</div>
+
+        <div class="step">
+            <div class="step-num"><span>04</span></div>
+            <div>
+                <h3>Automate "Input" (Forms)</h3>
+                <p>Stop typing data manually. Use digital forms (Google Forms, Typeform) for client intake so data
+                    arrives structured and ready to use.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-num"><span>05</span></div>
+            <div>
+                <h3>Notification Loops</h3>
+                <p>Set up simple triggers. When a form is submitted, instantly email yourself or post to Slack. Stop
+                    checking your inbox every 5 minutes.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-num"><span>06</span></div>
+            <div>
+                <h3>Document Generation</h3>
+                <p>Implement a script to auto-fill templates (Invoices, Contracts, Welcome Packs) from your central
+                    data. This saves hours per week.</p>
+            </div>
+        </div>
+
+        <!-- Phase 3 -->
+        <div class="phase-label">PHASE_3 // SCALING</div>
+
+        <div class="step">
+            <div class="step-num"><span>07</span></div>
+            <div>
+                <h3>Integration (The Bridge)</h3>
+                <p>Connect your separate tools. Make your CRM talk to your Accounting software. Remove the human
+                    "copy-paste" bridge.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-num"><span>08</span></div>
+            <div>
+                <h3>Client-Facing Automation</h3>
+                <p>Allow clients to book their own appointments, receive automatic status updates, and access their own
+                    files without emailing you.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-num"><span>09</span></div>
+            <div>
+                <h3>Reporting & Insights</h3>
+                <p>Build a live dashboard. Visualise your data automatically so you can make decisions based on facts,
+                    not gut feeling.</p>
+            </div>
+        </div>
+
+        <div class="step">
+            <div class="step-num"><span>10</span></div>
+            <div>
+                <h3>Continuous Review</h3>
+                <p>Automation is alive. Review your systems quarterly. As your business changes, your bots need new
+                    instructions.</p>
+            </div>
+        </div>
+
+        <footer
+            style="margin-top: 3rem; text-align: center; font-size: 0.8rem; color: #666; border-top: 1px solid var(--border-color); padding-top: 2rem;">
+            Generated by <span style="color:var(--accent-color)">Empower Automation</span> Systems
+        </footer>
+
+    </div>
+
+</body>
+
+</html>
