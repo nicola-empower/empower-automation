@@ -2,6 +2,8 @@
 import { Image } from "astro:assets";
 import heroBg from "../assets/hero-background.png";
 import TypewriterText from "./TypewriterText";
+import HeroStats from "./HeroStats";
+import TechStack from "./TechStack.astro";
 ---
 
 <section
@@ -89,6 +91,19 @@ import TypewriterText from "./TypewriterText";
                         >
                             Book Consultation
                         </a>
+                    </div>
+
+                    <div
+                        class="opacity-0 animate-fade-in"
+                        style="animation-delay: 4.5s; animation-fill-mode: forwards;"
+                    >
+                        <HeroStats client:load />
+                    </div>
+                    <div
+                        class="opacity-0 animate-fade-in"
+                        style="animation-delay: 5s; animation-fill-mode: forwards;"
+                    >
+                        <TechStack />
                     </div>
                 </div>
             </div>

@@ -11,6 +11,8 @@ import {
     Lightbulb,
     ArrowRight,
 } from "lucide-react";
+import { Image } from "astro:assets";
+import portfolioCoding from "../assets/portfolio-coding.jpg";
 ---
 
 <Layout
@@ -74,37 +76,54 @@ import {
             <div
                 class="bg-brand-dark border-2 border-brand-orange/20 rounded-2xl p-8 md:p-12 relative overflow-hidden shadow-[0_0_30px_rgba(242,111,33,0.1)]"
             >
-                <div class="absolute top-0 right-0 p-6 opacity-5">
-                    <Lightbulb className="w-32 h-32 text-brand-orange" />
-                </div>
-                <h2
-                    class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center gap-3"
-                >
-                    <span class="text-brand-orange">02.</span> The Spark
-                </h2>
-                <h3 class="text-xl text-gray-300 font-semibold mb-6">
-                    Discovering Google Apps Script
-                </h3>
-                <div class="space-y-4 text-gray-400 leading-relaxed text-lg">
-                    <p>
-                        That's when I discovered <span
-                            class="text-white font-bold"
-                            >Google Apps Script</span
-                        >; the connective tissue for the entire Google
-                        Workspace. It was the key to unlocking the efficiency I
-                        knew was possible. I dove in, teaching myself to code
-                        and using my own processes as a laboratory.
-                    </p>
-                    <p>
-                        Soon, I was building custom automations that managed
-                        emails, organised files, and synced data automatically.
-                        The hours I saved were staggering. I realised the
-                        bottlenecks I had eliminated for myself were the same
-                        ones holding other businesses back. My focus shifted
-                        from just *doing* tasks to *automating* them, and <strong
-                            class="text-brand-orange">Empower Automation</strong
-                        > was born.
-                    </p>
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h2
+                            class="text-2xl md:text-3xl font-bold text-white mb-4 flex items-center gap-3"
+                        >
+                            <span class="text-brand-orange">02.</span> The Spark
+                        </h2>
+                        <h3 class="text-xl text-gray-300 font-semibold mb-6">
+                            Discovering Google Apps Script
+                        </h3>
+                        <div
+                            class="space-y-4 text-gray-400 leading-relaxed text-lg"
+                        >
+                            <p>
+                                That's when I discovered <span
+                                    class="text-white font-bold"
+                                    >Google Apps Script</span
+                                >; the connective tissue for the entire Google
+                                Workspace. It was the key to unlocking the
+                                efficiency I knew was possible. I dove in,
+                                teaching myself to code and using my own
+                                processes as a laboratory.
+                            </p>
+                            <p>
+                                Soon, I was building custom automations that
+                                managed emails, organised files, and synced data
+                                automatically. The hours I saved were
+                                staggering. I realised the bottlenecks I had
+                                eliminated for myself were the same ones holding
+                                other businesses back. My focus shifted from
+                                just *doing* tasks to *automating* them, and <strong
+                                    class="text-brand-orange"
+                                    >Empower Automation</strong
+                                > was born.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div
+                            class="aspect-square rounded-xl overflow-hidden border border-brand-orange/30 shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500"
+                        >
+                            <Image
+                                src={portfolioCoding}
+                                alt="Nicola Berry working on code at a desk with a laptop - Google Apps Script Specialist"
+                                class="object-cover w-full h-full"
+                            />
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

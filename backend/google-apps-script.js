@@ -40,6 +40,8 @@ function doPost(e) {
             saveContactData(email, data, timestamp);
         } else if (type === 'LOGIC_GATE') {
             saveLogicGateData(email, data, timestamp);
+        } else if (type && type.startsWith('LEAD_MAGNET')) {
+            saveLeadMagnetData(email, data, timestamp, type);
         }
 
         return createResponse({ status: 'success', message: 'Data saved' });
@@ -96,6 +98,33 @@ function saveLogicGateData(email, data, timestamp) {
     const subject = `🧠 New Logic Gate: ${data.result.title}`;
     const body = `New Logic Gate Assessment: ${email}\nResult: ${data.result.title}`;
     if (NOTIFICATION_EMAIL) GmailApp.sendEmail(NOTIFICATION_EMAIL, subject, body);
+}
+
+function saveLeadMagnetData(email, data, timestamp, type) {
+    const ss = getSpreadsheet();
+    const SHEET_NAME_LEAD_MAGNET = "Lead_Magnets";
+    let sheet = ss.getSheetByName(SHEET_NAME_LEAD_MAGNET);
+    if (!sheet) {
+        sheet = ss.insertSheet(SHEET_NAME_LEAD_MAGNET);
+        sheet.appendRow(["Timestamp", "Email", "Type", "Resource"]);
+    }
+
+    sheet.appendRow([timestamp, email, type, data.resource]);
+
+    // 1. Notify Admin
+    if (NOTIFICATION_EMAIL) {
+        GmailApp.sendEmail(
+            NOTIFICATION_EMAIL,
+            `📥 New Lead Magnet Download: ${data.resource}`,
+            `New Lead: ${email}\nResource: ${data.resource}\nType: ${type}`
+        );
+    }
+
+    // 2. Send Resource to User
+    const subject = `Here is your resource: ${data.resource}`;
+    const body = `Hi,\n\nThanks for requesting "${data.resource}".\n\nYou can download it here:\n${data.assetUrl}\n\nThis is an automated email sent via Google Apps Script.\n\nBest,\nEmpower Automation`;
+
+    GmailApp.sendEmail(email, subject, body);
 }
 
 function testEmail() {

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Download, FileText, CheckSquare, ArrowRight, Lock, CheckCircle, Loader2 } from 'lucide-react';
+import { Download, FileText, SquareCheck, ArrowRight, Lock, CheckCircle, Loader2 } from 'lucide-react';
 
 const ASSETS = {
     checklist: {
-        icon: CheckSquare,
+        icon: SquareCheck,
         color: 'text-green-500',
         borderColor: 'border-green-500',
         bg: 'bg-green-500/10',
@@ -52,6 +52,7 @@ export default function LeadMagnet({ type = 'whitepaper', title, description, as
                     email: email,
                     data: {
                         resource: title,
+                        assetUrl: new URL(assetUrl, window.location.origin).href,
                         timestamp: new Date().toISOString()
                     }
                 })

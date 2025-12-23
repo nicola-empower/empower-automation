@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Calculator, ArrowRight, TrendingUp, AlertTriangle, CheckCircle, Bug } from 'lucide-react';
+import { Calculator, ArrowRight, TrendingUp, TriangleAlert, CircleCheck, Bug } from 'lucide-react';
 
 export default function RoiCalculator() {
     // 1. STATE: The Inputs
@@ -188,7 +188,7 @@ export default function RoiCalculator() {
                 {/* Card 1: The Loss */}
                 <div className="bg-brand-dark border border-red-900/30 rounded-xl p-6 relative overflow-hidden group">
                     <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
-                        <AlertTriangle className="w-12 h-12 text-red-500" />
+                        <TriangleAlert className="w-12 h-12 text-red-500" />
                     </div>
                     <h3 className="text-slate-500 mb-1">&gt; DETECTED_ANNUAL_DRAIN</h3>
                     <div className="text-4xl font-bold text-red-500 font-mono tracking-tighter">
@@ -219,7 +219,7 @@ export default function RoiCalculator() {
                 <div className="bg-green-900/10 border border-green-500/30 rounded-xl p-6 relative overflow-hidden grow flex flex-col justify-between">
                     <div>
                         <h3 className="text-green-600 mb-2 flex items-center gap-2">
-                            <CheckCircle className="w-4 h-4" /> PROJECTED_ASSET_VALUE (3 Years)
+                            <CircleCheck className="w-4 h-4" /> PROJECTED_ASSET_VALUE (3 Years)
                         </h3>
                         <div className="text-5xl font-bold text-white font-mono tracking-tighter mb-4">
                             £{results?.threeYearSavings.toLocaleString()}

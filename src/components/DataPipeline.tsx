@@ -59,7 +59,7 @@ export default function DataPipeline() {
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5, repeat: Infinity, repeatDelay: 1.5 }}
                     >
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2v20" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 7c0-5.333-8-5.333-8 0" /><path d="M10 7v14" /><path d="M6 21h12" /><path d="M6 13h10" /></svg>
                     </motion.div>
                     <motion.div
                         className="w-16 h-16 bg-brand-dark border border-green-500 rounded-lg flex items-center justify-center text-green-500 shadow-[0_0_15px_rgba(34,197,94,0.3)]"

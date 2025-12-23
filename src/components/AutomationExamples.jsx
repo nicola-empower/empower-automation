@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { X, ArrowRight, CircleCheck } from 'lucide-react';
 
 const automationExamples = [
     { title: 'Lead Capture to Follow-Up', category: 'internal', steps: ['Web Form Submission', 'Data Added to Google Sheet', 'New Lead Tagged in CRM', 'Personalized Follow-up Email Sent', 'Lead Status Updated'], benefit: 'Saves hours of manual data entry each week and prevents costly errors that lose valuable leads, ensuring rapid and consistent communication.' },
@@ -102,7 +102,7 @@ export default function AutomationExamples() {
 
                             <div className="mt-10 bg-green-900/20 border-l-4 border-green-500 p-6 rounded-r-lg">
                                 <h4 className="text-green-400 font-bold mb-2 flex items-center">
-                                    <CheckCircle2 className="w-5 h-5 mr-2" /> The Business Impact
+                                    <CircleCheck className="w-5 h-5 mr-2" /> The Business Impact
                                 </h4>
                                 <p className="text-green-100/80">{selectedExample.benefit}</p>
                             </div>

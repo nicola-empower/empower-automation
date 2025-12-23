@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { GitBranch, Brain, Database, CheckCircle, XCircle, Code, Server, ArrowRight } from 'lucide-react';
+import { GitBranch, Brain, Database, CircleCheck, CircleX, Code, Server, ArrowRight } from 'lucide-react';
 
 const questions = {
     start: {
@@ -33,7 +33,7 @@ const results = {
     manual: {
         title: "DO NOT AUTOMATE",
         desc: "If it's not repetitive, the time to build the automation will likely exceed the time saved. Stick to manual for now.",
-        icon: XCircle,
+        icon: CircleX,
         color: "text-gray-400",
         borderColor: "border-gray-600",
         bg: "bg-gray-900"

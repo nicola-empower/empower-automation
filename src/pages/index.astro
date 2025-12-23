@@ -6,10 +6,11 @@ import Footer from "../components/Footer.astro";
 import TerminalHero from "../components/TerminalHero.astro";
 import CodePricing from "../components/CodePricing.astro";
 import DataPipeline from "../components/DataPipeline";
+import RoiCalculator from "../components/RoiCalculator";
 import { Code } from "astro:components";
 
 import { Image } from "astro:assets";
-import portfolioImg from "../assets/portfolio.jpg";
+import portfolioImg from "../assets/portfolio-home.jpg";
 import autopsyImg from "../assets/automation-autopsy-feature.png";
 import {
     FileText,
@@ -158,7 +159,7 @@ const faqs = [
                         >
                             <Image
                                 src={portfolioImg}
-                                alt="Nicola - Founder of Empower Automation"
+                                alt="Nicola Berry, Founder of Empower Automation, sitting at a desk with a laptop"
                                 class="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-500"
                             />
                         </div>
@@ -255,6 +256,25 @@ const faqs = [
             </div>
         </section>
 
+        <!-- ROI Calculator Section -->
+        <section class="py-20 px-4 bg-[#0d1117] border-t border-gray-800">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold mb-4">
+                        <span class="text-brand-purple">const</span>
+                        <span class="text-white">costOfInaction</span> = <span
+                            class="text-brand-gold">calculateLoss()</span
+                        >;
+                    </h2>
+                    <p class="text-gray-400">
+                        See exactly how much your manual processes are costing
+                        you.
+                    </p>
+                </div>
+                <RoiCalculator client:visible />
+            </div>
+        </section>
+
         <!-- Automation Autopsy Feature -->
         <section
             class="py-20 px-4 bg-brand-dark border-t border-gray-800 relative overflow-hidden"
@@ -279,7 +299,7 @@ const faqs = [
                         >
                             <Image
                                 src={autopsyImg}
-                                alt="Automation Autopsy - Digital Heart"
+                                alt="Digital Heart Illustration representing the vital automation systems of a business"
                                 class="object-cover w-full h-full hover:scale-105 transition-transform duration-700"
                             />
                         </div>

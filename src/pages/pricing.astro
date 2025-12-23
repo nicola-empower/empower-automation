@@ -1,0 +1,769 @@
+---
+export const prerender = true;
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import {
+    CheckCircle,
+    Zap,
+    Clock,
+    Bot,
+    Briefcase,
+    BrainCircuit,
+    Mail,
+    Calendar,
+    FileText,
+    MonitorPlay,
+    MessageSquare,
+    TrendingUp,
+    Shield,
+} from "lucide-react";
+---
+
+<Layout
+    title="Automation Pricing | Empower Automation"
+    description="Transparent pricing for our Done-For-You automation services. From simple scripts to full AI agents."
+>
+    <Navbar />
+
+    <main id="main-content" class="pt-24 pb-20">
+        <!-- Hero Section -->
+        <section class="px-4 max-w-4xl mx-auto text-center mb-20">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+                Automation Service <span class="text-brand-orange"
+                    >Price List</span
+                > (2025)
+            </h1>
+            <p class="text-xl text-gray-400 leading-relaxed max-w-3xl mx-auto">
+                Implementations that pay for themselves. From quick wins to
+                complete business overhauls.
+                <span class="block mt-2 text-brand-gold font-medium"
+                    >Prices are for full implementation: setup, config,
+                    customisation, and testing.</span
+                >
+            </p>
+        </section>
+
+        <!-- Pricing Tiers -->
+        <section class="px-4 max-w-7xl mx-auto mb-24">
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Tier 1 -->
+                <div
+                    class="bg-[#161b22] border border-slate-800 rounded-2xl p-8 hover:border-brand-orange/50 transition-colors flex flex-col relative overflow-hidden group"
+                >
+                    <div
+                        class="absolute top-0 left-0 w-full h-1 bg-brand-orange/50"
+                    >
+                    </div>
+                    <div class="mb-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="p-2 bg-brand-orange/10 rounded-lg">
+                                <Zap class="w-6 h-6 text-brand-orange" />
+                            </div>
+                            <h2 class="text-2xl font-bold text-white">
+                                The Essentials
+                            </h2>
+                        </div>
+                        <p
+                            class="text-sm text-brand-orange font-bold uppercase tracking-wider mb-2"
+                        >
+                            Quick Wins
+                        </p>
+                        <div class="flex items-baseline gap-1 mb-4">
+                            <span class="text-3xl font-bold text-white"
+                                >£150 - £250</span
+                            >
+                            <span class="text-gray-500">/ script</span>
+                        </div>
+                        <div
+                            class="flex items-center gap-2 text-sm text-gray-400 mb-6"
+                        >
+                            <Clock class="w-4 h-4" />
+                            <span>Time to Install: &lt; 1 Hour</span>
+                        </div>
+                        <p
+                            class="text-gray-400 text-sm mb-6 border-b border-white/5 pb-6"
+                        >
+                            Solves annoying daily friction.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4 grow">
+                        <!-- Item -->
+                        <div>
+                            <h3 class="font-bold text-white text-lg">
+                                Gmail Archiver
+                            </h3>
+                            <p class="text-gray-400 text-sm">
+                                "Reach Inbox Zero automatically every morning."
+                            </p>
+                        </div>
+                        <!-- Item -->
+                        <div>
+                            <h3 class="font-bold text-white text-lg">
+                                Drive Organiser
+                            </h3>
+                            <p class="text-gray-400 text-sm">
+                                "Stop searching for files. Auto-sorts your
+                                chaos."
+                            </p>
+                        </div>
+                        <!-- Item -->
+                        <div>
+                            <h3 class="font-bold text-white text-lg">
+                                Email to Calendar
+                            </h3>
+                            <p class="text-gray-400 text-sm">
+                                "Never miss a meeting hidden in an email
+                                thread."
+                            </p>
+                        </div>
+                        <!-- Item -->
+                        <div>
+                            <h3 class="font-bold text-white text-lg">
+                                Uptime Monitor
+                            </h3>
+                            <p class="text-gray-400 text-sm">
+                                "Know your website is down before your customers
+                                do."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tier 2 -->
+                <div
+                    class="bg-[#161b22] border border-brand-gold/30 rounded-2xl p-8 shadow-[0_0_30px_rgba(253,185,19,0.1)] transform md:-translate-y-4 flex flex-col relative overflow-hidden"
+                >
+                    <div class="absolute top-0 left-0 w-full h-1 bg-brand-gold">
+                    </div>
+                    <div class="mb-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="p-2 bg-brand-gold/10 rounded-lg">
+                                <Briefcase class="w-6 h-6 text-brand-gold" />
+                            </div>
+                            <h2 class="text-2xl font-bold text-white">
+                                Business Ops
+                            </h2>
+                        </div>
+                        <p
+                            class="text-sm text-brand-gold font-bold uppercase tracking-wider mb-2"
+                        >
+                            Workflows
+                        </p>
+                        <div class="flex items-baseline gap-1 mb-4">
+                            <span class="text-3xl font-bold text-white"
+                                >£450 - £750</span
+                            >
+                            <span class="text-gray-500">/ script</span>
+                        </div>
+                        <div
+                            class="flex items-center gap-2 text-sm text-gray-400 mb-6"
+                        >
+                            <Clock class="w-4 h-4" />
+                            <span>Time to Install: 2 - 4 Hours</span>
+                        </div>
+                        <p
+                            class="text-gray-400 text-sm mb-6 border-b border-white/5 pb-6"
+                        >
+                            Replaces a manual human process. Saves 5-10
+                            hours/week.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4 flex-grow">
+                        <!-- Item -->
+                        <div>
+                            <h3 class="font-bold text-white text-lg">
+                                Form Handler
+                            </h3>
+                            <p class="text-gray-400 text-sm">
+                                "Instant lead response & auto-routing. Beats
+                                competitors."
+                            </p>
+                        </div>
+                        <!-- Item -->
+                        <div>
+                            <h3 class="font-bold text-white text-lg">
+                                Project Task Manager
+                            </h3>
+                            <p class="text-gray-400 text-sm">
+                                "Syncs your Project Tracker to your Calendar
+                                instantly."
+                            </p>
+                        </div>
+                        <!-- Item -->
+                        <div>
+                            <h3 class="font-bold text-white text-lg">
+                                Trello Digest
+                            </h3>
+                            <p class="text-gray-400 text-sm">
+                                "Your Weekly Report written for you,
+                                automatically."
+                            </p>
+                        </div>
+                        <!-- Item -->
+                        <div>
+                            <h3 class="font-bold text-white text-lg">
+                                Meeting Minutes
+                            </h3>
+                            <p class="text-gray-400 text-sm">
+                                "Agenda & Docs created before you walk into the
+                                room."
+                            </p>
+                        </div>
+                        <!-- Item -->
+                        <div>
+                            <h3 class="font-bold text-white text-lg">
+                                Mass PDF Gen
+                            </h3>
+                            <p class="text-gray-400 text-sm">
+                                "Generate 100 contracts/certificates in 30
+                                seconds."
+                            </p>
+                        </div>
+                        <!-- Item -->
+                        <div>
+                            <h3 class="font-bold text-white text-lg">
+                                Team Chat Bot
+                            </h3>
+                            <p class="text-gray-400 text-sm">
+                                "Push sales alerts directly to Slack/Teams."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tier 3 -->
+                <div
+                    class="bg-[#161b22] border border-slate-800 rounded-2xl p-8 hover:border-brand-magenta/50 transition-colors flex flex-col relative overflow-hidden group"
+                >
+                    <div
+                        class="absolute top-0 left-0 w-full h-1 bg-brand-magenta/50"
+                    >
+                    </div>
+                    <div class="mb-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="p-2 bg-brand-magenta/10 rounded-lg">
+                                <BrainCircuit
+                                    class="w-6 h-6 text-brand-magenta"
+                                />
+                            </div>
+                            <h2 class="text-2xl font-bold text-white">
+                                AI Agents
+                            </h2>
+                        </div>
+                        <p
+                            class="text-sm text-brand-magenta font-bold uppercase tracking-wider mb-2"
+                        >
+                            Premium
+                        </p>
+                        <div class="flex items-baseline gap-1 mb-4">
+                            <span class="text-3xl font-bold text-white"
+                                >£950 - £2,000+</span
+                            >
+                            <span class="text-gray-500">/ solution</span>
+                        </div>
+                        <div
+                            class="flex items-center gap-2 text-sm text-gray-400 mb-6"
+                        >
+                            <Clock class="w-4 h-4" />
+                            <span>Time to Install: 1 - 2 Days</span>
+                        </div>
+                        <p
+                            class="text-gray-400 text-sm mb-6 border-b border-white/5 pb-6"
+                        >
+                            "Magic." Replaces a Junior Admin or Assistant role.
+                        </p>
+                    </div>
+
+                    <div class="space-y-4 flex-grow">
+                        <!-- Item -->
+                        <div>
+                            <h3 class="font-bold text-white text-lg">
+                                AI Executive Assistant
+                            </h3>
+                            <p class="text-gray-400 text-sm">
+                                "Your personal Chief of Staff. Plans your entire
+                                day."
+                            </p>
+                        </div>
+                        <!-- Item -->
+                        <div>
+                            <h3 class="font-bold text-white text-lg">
+                                Vision Expense Tracker
+                            </h3>
+                            <p class="text-gray-400 text-sm">
+                                "Throw receipts in a folder. Done. No data
+                                entry."
+                            </p>
+                        </div>
+                        <!-- Item -->
+                        <div>
+                            <h3 class="font-bold text-white text-lg">
+                                Recruiter Bot
+                            </h3>
+                            <p class="text-gray-400 text-sm">
+                                "Customises your resume for every job
+                                application instantly."
+                            </p>
+                        </div>
+                        <!-- Item -->
+                        <div>
+                            <h3 class="font-bold text-white text-lg">
+                                Meeting Autopilot
+                            </h3>
+                            <p class="text-gray-400 text-sm">
+                                "Turns voice transcripts into assigned tasks on
+                                your list."
+                            </p>
+                        </div>
+                        <!-- Item -->
+                        <div>
+                            <h3 class="font-bold text-white text-lg">
+                                Smart Drafts
+                            </h3>
+                            <p class="text-gray-400 text-sm">
+                                "Your inbox replies to itself. You just hit
+                                send."
+                            </p>
+                        </div>
+                        <!-- Item -->
+                        <div>
+                            <h3 class="font-bold text-white text-lg">
+                                News Anchor
+                            </h3>
+                            <p class="text-gray-400 text-sm">
+                                "Daily market briefings generated as Slide
+                                decks."
+                            </p>
+                        </div>
+                        <!-- Item -->
+                        <div>
+                            <h3 class="font-bold text-white text-lg">
+                                AI Sentiment
+                            </h3>
+                            <p class="text-gray-400 text-sm">
+                                "Instant analysis of thousands of customer
+                                feedback rows."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bundles Section -->
+        <section class="px-4 max-w-6xl mx-auto mb-24">
+            <h2 class="text-3xl font-bold text-white text-center mb-12">
+                Bundles & Retainers
+            </h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Bundle 1 -->
+                <div
+                    class="bg-gradient-to-br from-[#161b22] to-slate-900 border border-brand-gold/30 p-8 rounded-2xl relative"
+                >
+                    <div
+                        class="absolute -top-4 -right-4 bg-brand-gold text-brand-dark font-bold px-4 py-1 rounded-full text-sm"
+                    >
+                        Best Value
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-2">
+                        The "Office OS" Bundle
+                    </h3>
+                    <div class="flex items-baseline gap-1 mb-4">
+                        <span class="text-3xl font-bold text-brand-gold"
+                            >£2,500</span
+                        >
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        "Complete overhaul of your business communication and
+                        organisation."
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start gap-3">
+                            <CheckCircle
+                                className="w-5 h-5 text-brand-gold shrink-0 mt-0.5"
+                            />
+                            <span class="text-gray-300"
+                                >1 AI Agent (Tier 3)</span
+                            >
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <CheckCircle
+                                className="w-5 h-5 text-brand-gold shrink-0 mt-0.5"
+                            />
+                            <span class="text-gray-300"
+                                >2 Business Ops Workflows (Tier 2)</span
+                            >
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <CheckCircle
+                                className="w-5 h-5 text-brand-gold shrink-0 mt-0.5"
+                            />
+                            <span class="text-gray-300"
+                                >3 Essentials Scripts (Tier 1)</span
+                            >
+                        </li>
+                    </ul>
+                    <a
+                        href="/contact"
+                        class="block w-full text-center bg-brand-gold hover:bg-yellow-400 text-brand-dark font-bold py-3 px-6 rounded-lg transition-colors"
+                    >
+                        Get Office OS
+                    </a>
+                </div>
+
+                <!-- Bundle 2 -->
+                <div
+                    class="bg-[#161b22] border border-slate-800 p-8 rounded-2xl"
+                >
+                    <h3 class="text-2xl font-bold text-white mb-2">
+                        The "Automation Retainer"
+                    </h3>
+                    <div class="flex items-baseline gap-1 mb-4">
+                        <span class="text-3xl font-bold text-white">£150</span>
+                        <span class="text-gray-500">/ month</span>
+                    </div>
+                    <p class="text-gray-400 mb-6">
+                        Ongoing support and management for your peace of mind.
+                    </p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-start gap-3">
+                            <CheckCircle
+                                class="w-5 h-5 text-brand-orange shrink-0 mt-0.5"
+                            />
+                            <span class="text-gray-300"
+                                >Monthly API Key management (OpenAI/Gemini)</span
+                            >
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <CheckCircle
+                                class="w-5 h-5 text-brand-orange shrink-0 mt-0.5"
+                            />
+                            <span class="text-gray-300"
+                                >Minor tweaks to prompts or logic</span
+                            >
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <CheckCircle
+                                class="w-5 h-5 text-brand-orange shrink-0 mt-0.5"
+                            />
+                            <span class="text-gray-300"
+                                >Peace of mind monitoring</span
+                            >
+                        </li>
+                    </ul>
+                    <a
+                        href="/contact"
+                        class="block w-full text-center bg-transparent border border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white font-bold py-3 px-6 rounded-lg transition-colors"
+                    >
+                        Inquire About Retainer
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feature Cards -->
+        <!-- Feature Cards -->
+        <section class="px-4 max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-white text-center mb-16">
+                Department Solutions
+            </h2>
+
+            <div class="space-y-12">
+                <!-- Finance Card -->
+                <div
+                    class="bg-[#161b22] border border-slate-800 p-8 rounded-2xl flex flex-col items-start hover:border-brand-orange/50 transition-colors"
+                >
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="p-3 bg-green-500/10 rounded-xl shrink-0">
+                            <TrendingUp className="w-8 h-8 text-green-500" />
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">
+                            Automated Expense Tracking
+                        </h3>
+                    </div>
+
+                    <div class="prose prose-invert max-w-none w-full">
+                        <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                            Stop wasting hours on manual data entry. This script
+                            turns your receipt folder into a structured
+                            financial database.
+                        </p>
+
+                        <h4
+                            class="text-white font-bold text-sm uppercase tracking-wider mb-3"
+                        >
+                            It Aggregates:
+                        </h4>
+                        <ul class="space-y-2 mb-6 text-gray-400">
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-500 font-bold">1.</span>
+                                <span
+                                    ><strong>Receipts:</strong> Scans Gmail attachments
+                                    and Drive folders for new files.</span
+                                >
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-500 font-bold">2.</span>
+                                <span
+                                    ><strong>Invoices:</strong> Identifies and parses
+                                    PDF invoices automatically.</span
+                                >
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-green-500 font-bold">3.</span>
+                                <span
+                                    ><strong>Data:</strong> Extracts Date, Amount,
+                                    Vendor, and Tax ID.</span
+                                >
+                            </li>
+                        </ul>
+
+                        <div
+                            class="bg-brand-dark p-4 rounded-lg border border-slate-700 mb-6"
+                        >
+                            <p class="text-sm text-gray-300">
+                                <Zap
+                                    class="inline w-4 h-4 text-brand-gold mr-1"
+                                />
+                                <strong>The Action:</strong> Sends data to OpenAI
+                                to standardise, then logs it to your Master Expenses
+                                Sheet and links the source file for your accountant.
+                            </p>
+                        </div>
+
+                        <h4
+                            class="text-white font-bold text-sm uppercase tracking-wider mb-3"
+                        >
+                            Usage Instructions:
+                        </h4>
+                        <ol class="space-y-2 text-gray-400 text-sm font-mono">
+                            <li class="flex items-center gap-2">
+                                <span
+                                    class="bg-slate-800 px-2 py-0.5 rounded text-xs"
+                                    >SETUP</span
+                                > Authorise the script with your Gmail & Drive.
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span
+                                    class="bg-slate-800 px-2 py-0.5 rounded text-xs"
+                                    >CONFIG</span
+                                > Set the 'Receipts' label or folder ID.
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span
+                                    class="bg-slate-800 px-2 py-0.5 rounded text-xs"
+                                    >TRIGGER</span
+                                > Auto-runs hourly. Watch your sheet update.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Communication Card (AI Assist) -->
+                <div
+                    class="bg-[#161b22] border border-slate-800 p-8 rounded-2xl flex flex-col items-start hover:border-brand-orange/50 transition-colors"
+                >
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="p-3 bg-blue-500/10 rounded-xl shrink-0">
+                            <Bot class="w-8 h-8 text-blue-500" />
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">
+                            AI Executive Assistant
+                        </h3>
+                    </div>
+
+                    <div class="prose prose-invert max-w-none w-full">
+                        <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                            This is the ultimate personal automation. Instead of
+                            checking 5 different apps to decide what to do, let
+                            AI tell you.
+                        </p>
+
+                        <h4
+                            class="text-white font-bold text-sm uppercase tracking-wider mb-3"
+                        >
+                            It Aggregates:
+                        </h4>
+                        <ul class="space-y-2 mb-6 text-gray-400">
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-500 font-bold">1.</span>
+                                <span
+                                    ><strong>Urgent Emails:</strong> Scans for "Urgent"
+                                    or "Action" keywords.</span
+                                >
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-500 font-bold">2.</span>
+                                <span
+                                    ><strong>Schedule:</strong> Finds your meetings
+                                    and identifies "Deep Work" gaps.</span
+                                >
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-blue-500 font-bold">3.</span>
+                                <span
+                                    ><strong>Active Projects:</strong> Checks heavily
+                                    edited Drive files.</span
+                                >
+                            </li>
+                        </ul>
+
+                        <div
+                            class="bg-brand-dark p-4 rounded-lg border border-slate-700 mb-6"
+                        >
+                            <p class="text-sm text-gray-300">
+                                <Zap
+                                    class="inline w-4 h-4 text-brand-gold mr-1"
+                                />
+                                <strong>The Action:</strong> Sends this context to
+                                GPT-4o (or Gemini), which acts as your manager and
+                                emails you a structured schedule.
+                            </p>
+                        </div>
+
+                        <h4
+                            class="text-white font-bold text-sm uppercase tracking-wider mb-3"
+                        >
+                            Usage Instructions:
+                        </h4>
+                        <ol class="space-y-2 text-gray-400 text-sm font-mono">
+                            <li class="flex items-center gap-2">
+                                <span
+                                    class="bg-slate-800 px-2 py-0.5 rounded text-xs"
+                                    >API KEY</span
+                                > You need an OpenAI or Gemini API Key.
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span
+                                    class="bg-slate-800 px-2 py-0.5 rounded text-xs"
+                                    >CONFIG</span
+                                > Add the key and your email address.
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span
+                                    class="bg-slate-800 px-2 py-0.5 rounded text-xs"
+                                    >TRIGGER</span
+                                > Set a Time-driven trigger for 7:00 AM.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Growth Card -->
+                <div
+                    class="bg-[#161b22] border border-slate-800 p-8 rounded-2xl flex flex-col items-start hover:border-brand-orange/50 transition-colors"
+                >
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="p-3 bg-purple-500/10 rounded-xl shrink-0">
+                            <MonitorPlay class="w-8 h-8 text-purple-500" />
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">
+                            The Content Multiplier
+                        </h3>
+                    </div>
+
+                    <div class="prose prose-invert max-w-none w-full">
+                        <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                            Consistency without the grind. Turn one piece of
+                            content into a month's worth of digital presence.
+                        </p>
+
+                        <h4
+                            class="text-white font-bold text-sm uppercase tracking-wider mb-3"
+                        >
+                            It Aggregates:
+                        </h4>
+                        <ul class="space-y-2 mb-6 text-gray-400">
+                            <li class="flex items-start gap-2">
+                                <span class="text-purple-500 font-bold">1.</span
+                                >
+                                <span
+                                    ><strong>Source:</strong> Reads Google Doc, Audio
+                                    Transcript, or YouTube Link.</span
+                                >
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-purple-500 font-bold">2.</span
+                                >
+                                <span
+                                    ><strong>Brand Voice:</strong> Checks your custom
+                                    'Persona' settings.</span
+                                >
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="text-purple-500 font-bold">3.</span
+                                >
+                                <span
+                                    ><strong>Trends:</strong> (Optional) Checks trending
+                                    topics in your niche.</span
+                                >
+                            </li>
+                        </ul>
+
+                        <div
+                            class="bg-brand-dark p-4 rounded-lg border border-slate-700 mb-6"
+                        >
+                            <p class="text-sm text-gray-300">
+                                <Zap
+                                    class="inline w-4 h-4 text-brand-gold mr-1"
+                                />
+                                <strong>The Action:</strong> AI breaks down the core
+                                ideas and generates native content for LinkedIn, Twitter,
+                                and Newsletter, saving them to your Content Calendar.
+                            </p>
+                        </div>
+
+                        <h4
+                            class="text-white font-bold text-sm uppercase tracking-wider mb-3"
+                        >
+                            Usage Instructions:
+                        </h4>
+                        <ol class="space-y-2 text-gray-400 text-sm font-mono">
+                            <li class="flex items-center gap-2">
+                                <span
+                                    class="bg-slate-800 px-2 py-0.5 rounded text-xs"
+                                    >INPUT</span
+                                > Drop a file into the 'To Process' Drive folder.
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span
+                                    class="bg-slate-800 px-2 py-0.5 rounded text-xs"
+                                    >PROCESS</span
+                                > Script detects new file and triggers generation.
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span
+                                    class="bg-slate-800 px-2 py-0.5 rounded text-xs"
+                                    >OUTPUT</span
+                                > Open your 'Drafts' folder to review.
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="mt-24 text-center px-4">
+            <h2 class="text-3xl font-bold text-white mb-6">
+                Ready to Buy Back Your Time?
+            </h2>
+            <p class="text-gray-400 mb-8 max-w-2xl mx-auto">
+                These prices are for the implementation of the systems. Once
+                they are built, they are yours forever. No hidden monthly fees
+                from us.
+            </p>
+            <a
+                href="/contact"
+                class="inline-flex items-center gap-2 bg-brand-orange hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg transition-all transform hover:scale-105 shadow-lg shadow-brand-orange/20"
+            >
+                Book a Free Discovery Call
+            </a>
+        </section>
+    </main>
+
+    <Footer />
+</Layout>
