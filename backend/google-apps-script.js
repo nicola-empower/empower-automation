@@ -85,6 +85,18 @@ function saveRoiData(email, data, timestamp) {
     const subject = `🚀 New ROI Lead: £${results.threeYearSavings}`;
     const body = `New Lead: ${email}\nSavings: £${results.threeYearSavings}`;
     if (NOTIFICATION_EMAIL) GmailApp.sendEmail(NOTIFICATION_EMAIL, subject, body);
+
+    // Send Report to Client
+    const clientSubject = "Your Custom ROI Report - Empower Automation";
+    const clientBody = `Hi,\n\nHere is the summary of your ROI Calculation:\n\n` +
+        `📉 Current Annual Drain: £${results.annualDrain.toLocaleString()}\n` +
+        `⏱️ Time Until Break Even: ${results.breakEven} Months\n` +
+        `💰 Projected 3-Year Asset Value: £${results.threeYearSavings.toLocaleString()}\n\n` +
+        `You are currently losing £${results.annualDrain.toLocaleString()} every year to manual tasks and errors. We can help you stop the bleeding.\n\n` +
+        `Reply to this email to discuss a custom solution.\n\n` +
+        `Best,\nNicola\nEmpower Automation`;
+
+    GmailApp.sendEmail(email, clientSubject, clientBody);
 }
 
 function saveLogicGateData(email, data, timestamp) {

@@ -9,6 +9,7 @@ interface Props {
 	title: string;
 	description?: string;
 	image?: string;
+	schema?: any;
 }
 
 const {
@@ -27,6 +28,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="manifest" href="/manifest.json" />
+		<meta name="theme-color" content="#0a0a0a" />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="canonical" href={canonicalURL} />
 
@@ -64,11 +67,47 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
 			gtag("config", "G-YSR6QK019Z");
 		</script>
+
+		<!-- JSON-LD Schema -->
+		<script
+			type="application/ld+json"
+			set:html={JSON.stringify({
+				"@context": "https://schema.org",
+				"@type": "Organization",
+				name: "Empower Automation",
+				url: "https://empowerautomation.co.uk",
+				logo: "https://empowerautomation.co.uk/favicon.svg",
+				sameAs: ["https://linkedin.com/in/empower-automation"],
+				contactPoint: {
+					"@type": "ContactPoint",
+					telephone: "+447402123456",
+					contactType: "customer service",
+					areaServed: "GB",
+					availableLanguage: "en",
+				},
+			})}
+		/>
+		{
+			Astro.props.schema && (
+				<script
+					type="application/ld+json"
+					set:html={JSON.stringify(Astro.props.schema)}
+				/>
+			)
+		}
 	</head>
 	<body
 		class="bg-brand-dark text-gray-300 font-sans antialiased selection:bg-brand-magenta selection:text-white"
 	>
-		<slot />
-		<Analytics client:idle />
+		<a
+			href="#main-content"
+			class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-brand-orange focus:text-white focus:rounded"
+		>
+			Skip to content
+		</a>
+		<div id="main-content">
+			<slot />
+		</div>
+		<Analytics client:only="react" />
 	</body>
 </html>

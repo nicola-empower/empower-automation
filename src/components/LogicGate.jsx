@@ -68,41 +68,7 @@ export default function LogicGate() {
     const [currentNode, setCurrentNode] = useState('start');
     const [history, setHistory] = useState([]);
 
-    // LEAD MAGNET LOGIC
-    const [email, setEmail] = useState('');
-    const [status, setStatus] = useState('idle');
 
-    const sendReport = async (e) => {
-        e.preventDefault();
-        if (!email) return;
-        setStatus('sending');
-
-        try {
-            // Replace with your actual Web App URL
-            const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbx5N5VINi4h1tZKV1o-MFbdmAP1kgpCYOZVbFvLec1v4Tp9_WRY53vVJjqBohpYAZNz/exec";
-
-            await fetch(WEB_APP_URL, {
-                method: 'POST',
-                mode: 'no-cors',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    type: 'LOGIC_GATE',
-                    email: email,
-                    data: {
-                        result: results[currentNode],
-                        path: history,
-                        timestamp: new Date().toISOString()
-                    }
-                })
-            });
-
-            setStatus('success');
-            setEmail('');
-        } catch (error) {
-            console.error('Error sending report:', error);
-            setStatus('error');
-        }
-    };
 
     const handleAnswer = (answer) => {
         const nextNode = questions[currentNode][answer];
@@ -214,32 +180,28 @@ export default function LogicGate() {
                                     {results[currentNode].desc}
                                 </p>
 
-                                <div className="mb-6">
-                                    <form onSubmit={sendReport} className="flex flex-col gap-2">
-                                        {status === 'success' ? (
-                                            <div className="text-green-400 text-center text-sm bg-green-900/20 p-3 rounded border border-green-500/30">
-                                                ✓ Result sent to your inbox!
-                                            </div>
-                                        ) : (
-                                            <div className="flex gap-2">
-                                                <input
-                                                    type="email"
-                                                    placeholder="Email me this result..."
-                                                    required
-                                                    value={email}
-                                                    onChange={(e) => setEmail(e.target.value)}
-                                                    className="bg-brand-dark border border-slate-600 text-white text-sm rounded px-4 py-3 w-full focus:outline-none focus:border-brand-orange"
-                                                />
-                                                <button
-                                                    type="submit"
-                                                    disabled={status === 'sending'}
-                                                    className="bg-slate-800 hover:bg-slate-700 text-white px-6 py-3 rounded font-bold transition-colors border border-slate-600 whitespace-nowrap"
-                                                >
-                                                    {status === 'sending' ? '...' : 'Send'}
-                                                </button>
-                                            </div>
-                                        )}
-                                    </form>
+                                <div className="mb-8">
+                                    {/* Dynamic CTA based on result */}
+                                    {currentNode === 'manual' && (
+                                        <a href="/why-custom" className="block w-full py-4 px-6 bg-[#161b22] hover:bg-[#1c2128] border border-gray-700 text-white rounded-lg font-bold text-center transition-all hover:scale-[1.02]">
+                                            Why Manual Processes Fail →
+                                        </a>
+                                    )}
+                                    {currentNode === 'human' && (
+                                        <a href="https://empowervaservices.co.uk" target="_blank" rel="noopener noreferrer" className="block w-full py-4 px-6 bg-pink-900/40 hover:bg-pink-900/60 border border-pink-500/50 text-white rounded-lg font-bold text-center transition-all hover:scale-[1.02]">
+                                            Explore VA Support Options →
+                                        </a>
+                                    )}
+                                    {currentNode === 'api' && (
+                                        <a href="/contact" className="block w-full py-4 px-6 bg-blue-900/40 hover:bg-blue-900/60 border border-blue-500/50 text-white rounded-lg font-bold text-center transition-all hover:scale-[1.02]">
+                                            Discuss Custom Development →
+                                        </a>
+                                    )}
+                                    {currentNode === 'script' && (
+                                        <a href="/contact" className="block w-full py-4 px-6 bg-green-900/40 hover:bg-green-900/60 border border-green-500/50 text-white rounded-lg font-bold text-center transition-all hover:scale-[1.02]">
+                                            Start Your Automation →
+                                        </a>
+                                    )}
                                 </div>
 
                                 <button

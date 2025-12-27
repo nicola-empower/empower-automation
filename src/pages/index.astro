@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import TerminalHero from "../components/TerminalHero.astro";
 import CodePricing from "../components/CodePricing.astro";
+import Pricing from "../components/Pricing.astro";
 import DataPipeline from "../components/DataPipeline";
 import RoiCalculator from "../components/RoiCalculator";
 import { Code } from "astro:components";
@@ -16,10 +17,11 @@ import {
     FileText,
     Mail,
     Database,
-    Quote,
-    ChevronDown,
     ArrowRight,
     Zap,
+    Check,
+    Quote,
+    ChevronDown,
 } from "lucide-react";
 
 const services = [
@@ -27,33 +29,34 @@ const services = [
         title: "Automated Document Generation",
         icon: "file-text",
         desc: "Instantly create invoices, quotes, or reports from Google Sheet data.",
-        code: `function generateInvoice(data) {
-  const doc = DocumentApp.create('Invoice');
-  doc.getBody().appendParagraph(data.client);
-  return doc.getUrl();
-}`,
+        benefits: [
+            "One-click invoices",
+            "Custom PDF reports",
+            "Error-free quotes",
+            "Auto-email delivery",
+        ],
     },
     {
         title: "Smart Email & Calendar Actions",
         icon: "mail",
         desc: "Automatically create calendar events and send personalised follow-ups.",
-        code: `function scheduleMeeting(email) {
-  CalendarApp.createEvent('Consultation',
-    new Date('2023-10-10'),
-    new Date('2023-10-10')
-  );
-  GmailApp.sendEmail(email, 'Confirmed');
-}`,
+        benefits: [
+            "Auto-schedule meetings",
+            "Personalised follow-ups",
+            "Inbox Zero workflows",
+            "Never miss a lead",
+        ],
     },
     {
         title: "Data & Workflow Management",
         icon: "database",
         desc: "Sync data between spreadsheets and manage your entire client onboarding.",
-        code: `function syncData(source, target) {
-  const data = source.getDataRange().getValues();
-  target.getRange(1, 1, data.length, data[0].length)
-    .setValues(data);
-}`,
+        benefits: [
+            "Sync Sheets & CRMs",
+            "Automate onboarding",
+            "Eliminate copy-pasting",
+            "Real-time dashboards",
+        ],
     },
 ];
 
@@ -138,7 +141,7 @@ const faqs = [
                     </a>
                 </div>
                 <div>
-                    <DataPipeline client:visible />
+                    <DataPipeline client:only="react" />
                 </div>
             </div>
         </section>
@@ -151,7 +154,7 @@ const faqs = [
                 <div class="order-2 md:order-1">
                     <div class="relative group">
                         <div
-                            class="absolute -inset-1 bg-gradient-to-r from-brand-purple to-brand-orange rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"
+                            class="absolute -inset-1 bg-linear-to-r from-brand-purple to-brand-orange rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"
                         >
                         </div>
                         <div
@@ -242,13 +245,16 @@ const faqs = [
                                 <p class="text-gray-400 mb-4 text-sm">
                                     {service.desc}
                                 </p>
-                                <div class="bg-[#1e1e1e] rounded p-3 text-xs overflow-hidden">
-                                    <Code
-                                        code={service.code}
-                                        lang="javascript"
-                                        theme="dracula"
-                                    />
-                                </div>
+                                <ul class="space-y-3">
+                                    {service.benefits.map((benefit) => (
+                                        <li class="flex items-start">
+                                            <Check className="w-4 h-4 text-brand-orange mt-1 shrink-0" />
+                                            <span class="ml-3 text-gray-300 text-sm">
+                                                {benefit}
+                                            </span>
+                                        </li>
+                                    ))}
+                                </ul>
                             </div>
                         ))
                     }
@@ -271,7 +277,7 @@ const faqs = [
                         you.
                     </p>
                 </div>
-                <RoiCalculator client:visible />
+                <RoiCalculator client:only="react" />
             </div>
         </section>
 
@@ -291,7 +297,7 @@ const faqs = [
                 <div class="order-2 md:order-1">
                     <div class="relative group">
                         <div
-                            class="absolute -inset-1 bg-gradient-to-r from-brand-magenta to-brand-purple rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"
+                            class="absolute -inset-1 bg-linear-to-r from-brand-magenta to-brand-purple rounded-lg blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200"
                         >
                         </div>
                         <div
@@ -334,7 +340,7 @@ const faqs = [
             </div>
 
             <!-- Pricing -->
-            <CodePricing />
+            <Pricing />
 
             <!-- Testimonial -->
             <section class="py-20 px-4 bg-brand-dark border-y border-gray-800">
@@ -364,6 +370,153 @@ const faqs = [
                     >
                         - Satisfied Client, Scotland
                     </cite>
+                </div>
+            </section>
+
+            <!-- Lead Magnet -->
+            <section
+                class="py-20 px-4 bg-linear-to-r from-[#161b22] to-[#0d1117] border-b border-gray-800 relative overflow-hidden"
+            >
+                <div
+                    class="absolute top-0 right-0 w-64 h-64 bg-brand-gold/5 rounded-full blur-3xl pointer-events-none -mr-32 -mt-32"
+                >
+                </div>
+                <div
+                    class="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10"
+                >
+                    <div>
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-gold/10 text-brand-gold text-xs font-bold uppercase tracking-wider mb-6"
+                        >
+                            <Zap className="w-4 h-4" />
+                            Free Resource
+                        </div>
+                        <h2
+                            class="text-3xl md:text-4xl font-bold text-white mb-6"
+                        >
+                            The 10-Step <br />
+                            <span class="text-brand-gold"
+                                >Automation Roadmap</span
+                            >
+                        </h2>
+                        <p class="text-gray-400 text-lg leading-relaxed mb-8">
+                            Stop guessing where to start. We've mapped out the
+                            exact proven path to scaling your business with
+                            automation, from simple quick wins to full AI
+                            agents.
+                        </p>
+                        <ul class="space-y-4 mb-8">
+                            <li class="flex items-center gap-3 text-gray-300">
+                                <Check
+                                    className="w-5 h-5 text-brand-orange shrink-0"
+                                />
+                                <span>Phase 1: Building a Solid Foundation</span
+                                >
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-300">
+                                <Check
+                                    className="w-5 h-5 text-brand-orange shrink-0"
+                                />
+                                <span>Phase 2: Streamlining Operations</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-300">
+                                <Check
+                                    className="w-5 h-5 text-brand-orange shrink-0"
+                                />
+                                <span>Phase 3: Driving Growth with AI</span>
+                            </li>
+                        </ul>
+                        <a
+                            href="/system-logs/10-step-automation-roadmap"
+                            class="inline-flex items-center gap-2 bg-white text-brand-dark hover:bg-gray-100 font-bold py-3 px-8 rounded-lg transition-all shadow-lg hover:shadow-xl"
+                        >
+                            Get the Roadmap
+                            <ArrowRight className="w-4 h-4" />
+                        </a>
+                    </div>
+                    <div class="relative group">
+                        <div
+                            class="absolute -inset-2 bg-linear-to-r from-brand-orange to-brand-gold rounded-xl blur-lg opacity-20 group-hover:opacity-40 transition duration-500"
+                        >
+                        </div>
+                        <div
+                            class="relative bg-[#1e1e1e] border border-gray-700 rounded-xl p-8 shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500"
+                        >
+                            <div
+                                class="flex items-center gap-4 border-b border-gray-700 pb-4 mb-6"
+                            >
+                                <div
+                                    class="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center"
+                                >
+                                    <FileText
+                                        className="w-6 h-6 text-brand-gold"
+                                    />
+                                </div>
+                                <div>
+                                    <h3 class="text-white font-bold">
+                                        Automation_Roadmap.pdf
+                                    </h3>
+                                    <p class="text-gray-500 text-xs">
+                                        PDF Document • Free Download
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="h-2 bg-gray-700 rounded w-3/4">
+                                </div>
+                                <div class="h-2 bg-gray-800 rounded w-full">
+                                </div>
+                                <div class="h-2 bg-gray-800 rounded w-5/6">
+                                </div>
+                                <div class="h-2 bg-gray-800 rounded w-full">
+                                </div>
+                            </div>
+                            <div
+                                class="mt-8 pt-6 border-t border-gray-700 grid grid-cols-3 gap-4"
+                            >
+                                <div class="text-center">
+                                    <div
+                                        class="text-brand-orange font-bold text-xl"
+                                    >
+                                        10
+                                    </div>
+                                    <div
+                                        class="text-gray-500 text-[10px] uppercase"
+                                    >
+                                        Steps
+                                    </div>
+                                </div>
+                                <div
+                                    class="text-center border-l border-gray-700"
+                                >
+                                    <div
+                                        class="text-brand-orange font-bold text-xl"
+                                    >
+                                        3
+                                    </div>
+                                    <div
+                                        class="text-gray-500 text-[10px] uppercase"
+                                    >
+                                        Phases
+                                    </div>
+                                </div>
+                                <div
+                                    class="text-center border-l border-gray-700"
+                                >
+                                    <div
+                                        class="text-brand-orange font-bold text-xl"
+                                    >
+                                        ∞
+                                    </div>
+                                    <div
+                                        class="text-gray-500 text-[10px] uppercase"
+                                    >
+                                        Value
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -397,7 +550,7 @@ const faqs = [
 
             <!-- CTA -->
             <section
-                class="py-24 px-4 text-center bg-gradient-to-b from-brand-dark to-[#1a1f2e]"
+                class="py-24 px-4 text-center bg-linear-to-b from-brand-dark to-[#1a1f2e]"
             >
                 <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
                     Ready to Execute?

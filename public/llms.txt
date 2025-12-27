@@ -1,0 +1,29 @@
+# Empower Automation
+
+Custom Google Workspace Automation Specialist. We build bespoke Google Apps Scripts to streamline your business, save time, and eliminate manual admin.
+
+## Services
+
+- **Google Workspace Automation**: Custom scripts for Gmail, Sheets, Docs, and Drive.
+- **Web Data Extraction**: Automated scraping for market research and lead gen.
+- **Business Process Automation**: End-to-end workflow optimization.
+- **Consulting**: Strategic automation advice for small businesses.
+
+## Pricing
+
+- **The Essentials**: £150 - £250 (Quick wins like Gmail Archivers)
+- **Business Ops**: £450 - £750 (Full workflow automation)
+- **AI Agents**: £950 - £2,000+ (Intelligent autonomous agents)
+
+## Contact
+- Email: nicola@empowerautomation.co.uk
+- Website: https://empowerautomation.co.uk
+
+## Core Links
+
+- [Homepage](https://empowerautomation.co.uk)
+- [Services](https://empowerautomation.co.uk/services)
+- [Pricing](https://empowerautomation.co.uk/pricing)
+- [About](https://empowerautomation.co.uk/about)
+- [Contact](https://empowerautomation.co.uk/contact)
+- [System Logs (Blog)](https://empowerautomation.co.uk/system-logs)

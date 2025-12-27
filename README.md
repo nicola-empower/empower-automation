@@ -23,10 +23,12 @@ This website showcases automation services through an interactive, developer-the
 ### 🚀 "Wow" Factors
 - **Magic Welcome**: URL-based personalization engine (e.g., `?name=Elon&company=SpaceX` rewrites the terminal hero text).
 - **Live Savings Ticker**: Matrix-style top bar calculating "Total Hours Saved" for clients in real-time.
+- **Instant Search**: Client-side search for blog posts and services.
 - **Terminal Aesthetic**: Custom dark-mode design inspired by developer environments (VS Code/Terminal).
 
 ### 🤖 Lead Generation & Backend
 - **Unified Backend**: A single Google Apps Script handles all form submissions (Serverless & Free).
+- **Lead Magnet**: "10-Step Automation Roadmap" with dedicated visual CTA and download logic.
 - **ROI Calculator**: React-based tool calculating annual savings and break-even time -> Data sent to Sheets -> Auto-email notification.
 - **Automation Logic Gate**: Interactive decision tree quiz -> Leads captured in Sheets.
 - **Contact Form**: Secure submission directly to Google Sheets with instant email alerts to admin.
@@ -111,7 +113,8 @@ empower-automation/
 - ✅ robots.txt
 - ✅ Canonical URLs
 - ✅ Open Graph meta tags
-- ✅ Structured data ready
+- ✅ Structured data ready (JSON-LD)
+- ✅ **AI Agent Optimized** (`/llms.txt`) - for ChatGPT/Perplexity
 - ✅ Optimized images (WebP/AVIF)
 - ✅ Fast page loads (<1s)
 

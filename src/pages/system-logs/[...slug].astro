@@ -174,9 +174,27 @@ const components = {
     IconQuote: Quote,
     IconPlay: Play,
 };
+
+const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.data.title,
+    image: [
+        new URL(post.data.heroImage || "/og-image.png", Astro.site).toString(),
+    ],
+    datePublished: post.data.pubDate.toISOString(),
+    dateModified: new Date().toISOString(),
+    author: [
+        {
+            "@type": "Person",
+            name: "Nicola",
+            url: "https://empowerautomation.co.uk",
+        },
+    ],
+};
 ---
 
-<Layout title={`${post.data.title} | System Logs`}>
+<Layout title={`${post.data.title} | System Logs`} schema={articleSchema}>
     <Navbar />
     <main class="pt-32 pb-20 px-4">
         <article class="max-w-3xl mx-auto">
@@ -232,7 +250,7 @@ const components = {
 
             <div class="mt-16 pt-8 border-t border-gray-800">
                 <LeadMagnet
-                    client:visible
+                    client:only="react"
                     type="checklist"
                     title="10-Step Automation Roadmap"
                     description="Don't just automate randomly. Follow our proven roadmap to scale your operations systematically without breaking things."
